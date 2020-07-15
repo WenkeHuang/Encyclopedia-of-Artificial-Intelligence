@@ -35,8 +35,14 @@ $$
 
 Assumption：
 $$
-设特征空间\mathcal{X}是n维实数向量空间R^n，x_i,x_j \in \mathcal{X},x_i=(x_i^{(1)},x_i^{(2)},..x_i^{(n)})
+设特征空间\mathcal{X}是n维实数向量空间R^n，x_i,x_j \in \mathcal{X},x_i=(x_i^{(1)},x_i^{(2)},..x_i^{(n)})^T,x_j=(x_j^{(1)},x_j^{(2)},..x_j^{(n)})^T,x_i,x_j的L_p距离定义为：
 $$
+
+$$
+L_p(x_i,x_j)=(\sum_{l=1}^n|x_i^{l}-x_j^{l}|^p)^{\frac{1}{p}}
+$$
+
+
 
 
 
