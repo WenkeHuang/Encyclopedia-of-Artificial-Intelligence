@@ -53,8 +53,10 @@ $$
 $$
 L_2(x_i,x_j)=\sum_{l=1}^n|x_i^{(l)}-x_j^{(l)}|
 $$
-其中当$p=$，称为曼哈顿距离(Manhattan distance)：
-
+其中当$p=\infty$，称为曼哈顿距离(Manhattan distance)：
+$$
+L_{\infty}(x_i,x_j) = \max_l|x_i^{(l)}-x_j^{(l)}|
+$$
 
 
 
