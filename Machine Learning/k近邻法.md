@@ -39,15 +39,21 @@ $$
 $$
 
 $$
-L_p(x_i,x_j)=(\sum_{l=1}^n|x_i^{l}-x_j^{l}|^p)^{\frac{1}{p}}
+L_p(x_i,x_j)=(\sum_{l=1}^n|x_i^{(l)}-x_j^{(l)}|^p)^{\frac{1}{p}}
 $$
 
 
 
 
-其中当
-
-
+其中当$p=2$，称为欧式距离(Euclidean distance)：
+$$
+L_2(x_i,x_j)=(\sum_{l=1}^n|x_i^{(l)}-x_j^{(l)}|^2)^{\frac{1}{2}}
+$$
+其中当$p=1$，称为曼哈顿距离(Manhattan distance)：
+$$
+L_2(x_i,x_j)=\sum_{l=1}^n|x_i^{(l)}-x_j^{(l)}|
+$$
+其中当$p=$，称为曼哈顿距离(Manhattan distance)：
 
 
 
