@@ -11,3 +11,7 @@ I have the Artificial Intelligence knowledge you want.
 - cs229: Machine Learning Stanford University
 - CS231n: Convolutional Neural Networks for Visual Recognition Stanford University
 - CS 520 Knowledge Graphs Stanford University
+## Personal Information
+Major：Software engineering & finance    
+Research Areas：Full Stack development & Computer Vision & Econometrics    
+[Blog](https://blog.csdn.net/qq_41409438) 
