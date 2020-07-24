@@ -2,6 +2,8 @@
 
 (Classification + Localization)
 
+![objectdetectionsingleobject](../../img/CV/objectdetectionsingleobject.png)
+
 
 
 
