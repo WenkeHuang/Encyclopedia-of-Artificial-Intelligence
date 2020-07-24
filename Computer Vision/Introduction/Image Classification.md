@@ -50,6 +50,10 @@ A good image classification model must be invariant to the cross product of all 
 2. Use Machine Learning algorithms to train a classifier 
 3. Evaluate the classifier on new images
 
+# Distance Metric to compare images
+
+
+
 #  Reference
 
 [Image Classification](https://cs231n.github.io/classification/)
