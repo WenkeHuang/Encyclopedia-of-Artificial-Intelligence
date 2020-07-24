@@ -44,28 +44,34 @@ A good image classification model must be invariant to the cross product of all 
 
 
 
-# Machine Learning: Data-Driven Approach 
+# Data-Driven Approach 
 
 1. Collect a dataset of images and labels 
 2. Use Machine Learning algorithms to train a classifier 
 3. Evaluate the classifier on new images
 
-# Distance Metric to compare images
+# Distance Metric
 
-## L1
+**K-Nearest Neighbors: Distance Metric**
+
+**L1**
 
 L1 Manhattan distance：
 $$
 d_1(I_1,I_2)=\sum_P=|I_1^P-I_2^P|
 $$
-
-## L2
+**L2**
 
 L2 Euclidean distance
 $$
 d_2(I_1,I_2)=\sqrt {\sum_P(I_1^P-I_2^P)^2}
 $$
 
+## Hyperparameters
+
+These are hyperparameters: choices about the algorithms themselves. 
+
+Very problem-dependent. Must try them all out and see what works best
 
 #  Reference
 
