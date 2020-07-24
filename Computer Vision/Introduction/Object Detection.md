@@ -68,7 +68,15 @@ A 2D bounding box on an image is a **frustrum** in the 3D space
 Localize an object in 3D:
  The object can be anywhere in the **camera viewing frustrum**!
 
+![Simple Camera Model](../../img/CV/Simple Camera Model.png)
 
+## 3D Object Detection: Monocular Camera
+
+![3D Object Detection](../../img/CV/Monocular Camera.png)
+
+## 3D Shape Prediction: Mesh R-CNN
+
+![Mesh R-CNN](../../img/CV/Mesh R-CNN.png)
 
 
 
