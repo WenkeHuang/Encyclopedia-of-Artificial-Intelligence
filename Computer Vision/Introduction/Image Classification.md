@@ -54,10 +54,18 @@ A good image classification model must be invariant to the cross product of all 
 
 ## L1
 
-L1 distance：
+L1 Manhattan distance：
 $$
 d_1(I_1,I_2)=\sum_P=|I_1^P-I_2^P|
 $$
+
+## L2
+
+L2 Euclidean distance
+$$
+d_2(I_1,I_2)=
+$$
+
 
 #  Reference
 
