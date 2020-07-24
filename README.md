@@ -10,6 +10,8 @@ I have the Artificial Intelligence knowledge you want.
 [7.支持向量机](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Machine%20Learning/7.%20%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA.md)<br>
 [8.提升方法](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Machine%20Learning/8.%20%E6%8F%90%E5%8D%87%E6%96%B9%E6%B3%95.md)<br>
 [9. EM算法及其推广](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Machine%20Learning/9.%20EM%E7%AE%97%E6%B3%95%E5%8F%8A%E5%85%B6%E6%8E%A8%E5%B9%BF.md)<br>
+[10. 隐马尔可夫模型](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Machine%20Learning/10.%20%E9%9A%90%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E6%A8%A1%E5%9E%8B.md)
+[11. 条件随机场]()
 ## Reference books and courses
 - 统计学习方法 第二版 李航
 - cs229: Machine Learning Stanford University
