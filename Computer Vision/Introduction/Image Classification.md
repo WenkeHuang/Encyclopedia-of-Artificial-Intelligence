@@ -52,6 +52,12 @@ A good image classification model must be invariant to the cross product of all 
 
 # Distance Metric to compare images
 
+## L1
+
+L1 distance：
+$$
+d_1(I-1)
+$$
 
 
 #  Reference
