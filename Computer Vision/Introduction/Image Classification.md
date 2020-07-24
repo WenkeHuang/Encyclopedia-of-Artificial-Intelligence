@@ -75,7 +75,19 @@ Very problem-dependent. Must try them all out and see what works best.
 
 In **Image classification** we start with a **training set** of images and labels, and must predict labels on the test set. 
 
-The **K-Nearest Neighbors** classifier predicts labels based on the K nearest training examples Distance metric and K are hyperparameters Choose hyperparameters using the validation set; Only run on the test set once at the very end! Pixel distance is not very informative. 
+The **K-Nearest Neighbors** classifier predicts labels based on the **K** nearest training examples
+
+ Distance metric and K are **hyperparameters** 
+
+Choose hyperparameters using the **validation set**; 
+
+Only run on the test set once at the very end! 
+
+Pixel distance is not very informative. 
+
+# Linear Classifier
+
+
 
 #  Reference
 
