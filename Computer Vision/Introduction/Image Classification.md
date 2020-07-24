@@ -56,7 +56,7 @@ A good image classification model must be invariant to the cross product of all 
 
 L1 distance：
 $$
-d_1(I_1,I_2)
+d_1(I_1,I_2)=\sum_P=|I_1^P
 $$
 
 
