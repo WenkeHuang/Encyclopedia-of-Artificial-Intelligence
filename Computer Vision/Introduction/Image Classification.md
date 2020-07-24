@@ -42,6 +42,14 @@ A good image classification model must be invariant to the cross product of all 
 - **Learning:** Our task is to use the training set to learn what every one of the classes looks like. We refer to this step as *training a classifier*, or *learning a model*. **学习：**我们的任务是使用训练集来学习每一堂课的模样。 我们将此步骤称为“训练分类器”或“学习模型”。
 - **Evaluation:** In the end, we evaluate the quality of the classifier by asking it to predict labels for a new set of images that it has never seen before. We will then compare the true labels of these images to the ones predicted by the classifier. Intuitively, we’re hoping that a lot of the predictions match up with the true answers (which we call the *ground truth*). **评估：**最后，我们通过要求分类器预测从未见过的一组新图像的标签来评估分类器的质量。 然后，我们将这些图像的真实标签与分类器预测的标签进行比较。 凭直觉，我们希望很多预测与真实答案（我们称为“基本事实”）相符。
 
+
+
+# Machine Learning: Data-Driven Approach 
+
+1. Collect a dataset of images and labels 
+2. Use Machine Learning algorithms to train a classifier 
+3. Evaluate the classifier on new images
+
 #  Reference
 
 [Image Classification](https://cs231n.github.io/classification/)
