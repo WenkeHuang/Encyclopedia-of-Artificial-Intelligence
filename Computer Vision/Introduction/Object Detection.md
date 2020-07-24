@@ -40,9 +40,33 @@ Final:
 
 ![Scene Graphs](../../img/CV/Scene Graphs.png)
 
+## Scene Graph Prediction
 
+![Scene Graph Prediction](../../img/CV/Scene Graph Prediction.png)
 
+## 3D Object Detection
 
+2D Object Detection: 2D bounding box
+
+(x, y, w, h)
+
+3D Object Detection:
+ 3D oriented bounding box
+
+(x, y, z, w, h, l, r, p, y) Simplified bbox: no roll & pitch
+
+Much harder problem than 2D object detection!
+
+![3D Object Detection](../../img/CV/3D Object Detection.png)
+
+## 3D Object Detection: Simple Camera Model
+
+A point on the image plane corresponds to a **ray** in the 3D space
+
+A 2D bounding box on an image is a **frustrum** in the 3D space
+
+Localize an object in 3D:
+ The object can be anywhere in the **camera viewing frustrum**!
 
 
 
