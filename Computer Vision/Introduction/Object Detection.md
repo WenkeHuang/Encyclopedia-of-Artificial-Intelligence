@@ -26,9 +26,9 @@ Final:
 
 ● Relatively fast to run; e.g. Selective Search gives 2000 region proposals in a few seconds on CPU
 
+# 
 
-
-
+Object Detection + Captioning = Dense Captioning
 
 
 
