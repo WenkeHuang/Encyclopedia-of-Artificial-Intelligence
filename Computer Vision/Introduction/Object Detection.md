@@ -34,9 +34,11 @@ Final:
 
 ## Dense Video Captioning
 
+![Dense Captioning](../../img/CV/ Dense Video Captioning.png)
 
+## Objects + Relationships = Scene Graphs
 
-
+![Scene Graphs](../../img/CV/Scene Graphs.png)
 
 
 
