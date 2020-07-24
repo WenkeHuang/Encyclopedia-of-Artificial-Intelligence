@@ -63,7 +63,7 @@ $$
 
 L2 Euclidean distance
 $$
-d_2(I_1,I_2)=
+d_2(I_1,I_2)=\sqrt {\sum_P(I_1^P-I_2^P)^2}
 $$
 
 
