@@ -26,11 +26,13 @@ Final:
 
 ● Relatively fast to run; e.g. Selective Search gives 2000 region proposals in a few seconds on CPU
 
-# 
+# Beyond 2D Object Detection
 
-Object Detection + Captioning = Dense Captioning
+## Object Detection + Captioning = Dense Captioning
 
+![Dense Captioning](../../img/CV/Dense Captioning.png)
 
+## Dense Video Captioning
 
 
 
