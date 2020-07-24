@@ -87,7 +87,9 @@ Pixel distance is not very informative.
 
 # Linear Classifier
 
-
+$$
+f(x,W) = Wx+b
+$$
 
 #  Reference
 
