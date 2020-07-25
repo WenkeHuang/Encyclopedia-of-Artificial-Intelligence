@@ -30,19 +30,19 @@ Final:
 
 ## Object Detection + Captioning = Dense Captioning
 
-![Dense Captioning](../../img/CV/Dense Captioning.png)
+![Dense Captioning](../../img/CV/DenseCaptioning.png)
 
 ## Dense Video Captioning
 
-![Dense Captioning](../../img/CV/ Dense Video Captioning.png)
+![Dense Captioning](../../img/CV/DenseVideoCaptioning.png)
 
 ## Objects + Relationships = Scene Graphs
 
-![Scene Graphs](../../img/CV/Scene Graphs.png)
+![Scene Graphs](../../img/CV/SceneGraphs.png)
 
 ## Scene Graph Prediction
 
-![Scene Graph Prediction](../../img/CV/Scene Graph Prediction.png)
+![Scene Graph Prediction](../../img/CV/SceneGraphPrediction.png)
 
 ## 3D Object Detection
 
@@ -57,7 +57,7 @@ Final:
 
 Much harder problem than 2D object detection!
 
-![3D Object Detection](../../img/CV/3D Object Detection.png)
+![3D Object Detection](../../img/CV/3DObjectDetection.png)
 
 ## 3D Object Detection: Simple Camera Model
 
@@ -68,15 +68,15 @@ A 2D bounding box on an image is a **frustrum** in the 3D space
 Localize an object in 3D:
  The object can be anywhere in the **camera viewing frustrum**!
 
-![Simple Camera Model](../../img/CV/Simple Camera Model.png)
+![Simple Camera Model](../../img/CV/SimpleCameraModel.png)
 
 ## 3D Object Detection: Monocular Camera
 
-![3D Object Detection](../../img/CV/Monocular Camera.png)
+![3D Object Detection](../../img/CV/MonocularCamera.png)
 
 ## 3D Shape Prediction: Mesh R-CNN
 
-![Mesh R-CNN](../../img/CV/Mesh R-CNN.png)
+![Mesh R-CNN](../../img/CV/MeshR-CNN.png)
 
 
 
