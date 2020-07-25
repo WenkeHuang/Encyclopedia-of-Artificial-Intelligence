@@ -78,30 +78,6 @@ Localize an object in 3D:
 
 ![Mesh R-CNN](../../img/CV/MeshR-CNN.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Reference 
 
 [cs231 **Detection and Segmentation** Semantic segmentation Object detection Instance segmentation](http://cs231n.stanford.edu/slides/2020/lecture_12.pdf)
