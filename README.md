@@ -17,7 +17,7 @@ I have the Artificial Intelligence knowledge you want.
 [14. 聚类方法](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Machine%20Learning/14.%20%E8%81%9A%E7%B1%BB%E6%96%B9%E6%B3%95.md)<br>
 [15. 奇异值分解](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Machine%20Learning/15.%20%E5%A5%87%E5%BC%82%E5%80%BC%E5%88%86%E8%A7%A3.md)<br>
 [16. 主成分分析](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Machine%20Learning/16.%20%E4%B8%BB%E6%88%90%E5%88%86%E5%88%86%E6%9E%90.md)<br>
-[17. 潜在语义分割](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Machine%20Learning/17.%20%E6%BD%9C%E5%9C%A8%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2.md)
+[17. 潜在语义分析](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Machine%20Learning/17.%20%E6%BD%9C%E5%9C%A8%E8%AF%AD%E4%B9%89%E5%88%86%E6%9E%90.md)<br>
 ## Reference books and courses
 - 统计学习方法 第二版 李航
 - cs229: Machine Learning Stanford University
