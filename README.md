@@ -16,7 +16,7 @@ I have the Artificial Intelligence knowledge you want.
 [13. 无监督学习概论](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Machine%20Learning/13.%20%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%AE%BA.md)<br>
 [14. 聚类方法](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Machine%20Learning/14.%20%E8%81%9A%E7%B1%BB%E6%96%B9%E6%B3%95.md)<br>
 [15. 奇异值分解](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Machine%20Learning/15.%20%E5%A5%87%E5%BC%82%E5%80%BC%E5%88%86%E8%A7%A3.md)<br>
-[16. 主成分分析]()
+[16. 主成分分析](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Machine%20Learning/16.%20%E4%B8%BB%E6%88%90%E5%88%86%E5%88%86%E6%9E%90.md)<br>
 ## Reference books and courses
 - 统计学习方法 第二版 李航
 - cs229: Machine Learning Stanford University
