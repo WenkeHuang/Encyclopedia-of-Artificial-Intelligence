@@ -13,7 +13,10 @@ I have the Artificial Intelligence knowledge you want.
 [10. 隐马尔可夫模型](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Machine%20Learning/10.%20%E9%9A%90%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E6%A8%A1%E5%9E%8B.md)<br>
 [11. 条件随机场](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Machine%20Learning/11.%20%E6%9D%A1%E4%BB%B6%E9%9A%8F%E6%9C%BA%E5%9C%BA.md)<br>
 [12. 统计学系方法总结](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Machine%20Learning/12.%20%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93.md)<br>
-[](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Machine%20Learning/13.%20%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%AE%BA.md)
+[13. 无监督学习概论](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Machine%20Learning/13.%20%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%AE%BA.md)<br>
+[14. 聚类方法](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Machine%20Learning/14.%20%E8%81%9A%E7%B1%BB%E6%96%B9%E6%B3%95.md)<br>
+[15. 奇异值分解](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Machine%20Learning/15.%20%E5%A5%87%E5%BC%82%E5%80%BC%E5%88%86%E8%A7%A3.md)<br>
+[16. 主成分分析]()
 ## Reference books and courses
 - 统计学习方法 第二版 李航
 - cs229: Machine Learning Stanford University
