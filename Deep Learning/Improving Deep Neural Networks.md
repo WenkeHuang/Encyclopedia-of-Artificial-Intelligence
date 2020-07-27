@@ -265,6 +265,22 @@ $$
 
 
 
+器学习的目标无非就是不断优化损失函数，使其值最小。在上图中， ![[公式]](https://www.zhihu.com/equation?tex=J%28w%2Cb%29) 就是我们要优化的目标函数
+
+我们不难看出，**标准化后可以更加容易地得出最优参数** ![[公式]](https://www.zhihu.com/equation?tex=w) **和** ![[公式]](https://www.zhihu.com/equation?tex=b) **以及计算出** ![[公式]](https://www.zhihu.com/equation?tex=J%28w%2Cb%29) **的最小值，从而达到加速收敛的效果**。 
+
+## Batch Normalization
+
+在机器学习中，**最常用标准化的地方**莫过于神经网络的 **BN 层（Batch Normalization）**
+
+我们知道数据预处理做标准化可以加速收敛，同理，在神经网络使用标准化也可以**加速收敛**，而且还有如下好处：
+
+- 具有正则化的效果（Batch Normalization reglarizes the model）
+- 提高模型的泛化能力（Be advantageous to the generalization of network）
+- 允许更高的学习速率从而加速收敛（Batch Normalization enables higher learning rates）
+
+其原理是**利用正则化减少内部相关变量分布的偏移（Reducing Internal Covariate Shift）**，从而**提高了算法的鲁棒性**。
+
 
 
 
