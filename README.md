@@ -23,7 +23,8 @@ I have the Artificial Intelligence knowledge you want.
 [20. 潜在狄利克雷分配](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Machine%20Learning/20.%20%E6%BD%9C%E5%9C%A8%E7%8B%84%E5%88%A9%E5%85%8B%E9%9B%B7%E5%88%86%E9%85%8D.md)<br>
 [21. PageRank算法](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Machine%20Learning/21.%20PageRank%E7%AE%97%E6%B3%95.md)
 ## Deep Learning
-[]
+[Neural Networks and Deep Learning](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Deep%20Learning/Neural%20Networks%20and%20Deep%20Learning.md)<br>
+
 ## Reference books and courses
 - 统计学习方法 第二版 李航
 - cs229: Machine Learning Stanford University
