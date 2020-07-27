@@ -402,9 +402,11 @@ $$
 $$
 w^{[l]}=np.random.randn(n^{[l]},n^{[l-1]}) * np.sqrt(\frac{2}{n^{[l-1]}+n^{[l]}})
 $$
+**Xavier初始化主要用于tanh，不适用于ReLU。**
+
 **He initialization**
 
-
+为了解决上面的问题，何恺明大神提出了一种针对ReLU的初始化方法，一般称作 He initialization 或 MSRA。
 
 
 
