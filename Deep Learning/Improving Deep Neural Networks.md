@@ -388,6 +388,8 @@ Xavier初始化可以帮助减少梯度消失的问题，使得信号在神经�
 
 **Xavier初始化的基本思想：**保持输入和输出的方差一致（服从相同的分布），这样就避免了所有输出值都趋向于0。
 
+根据输入和输出神经元的数量自动决定初始化的范围：定义参数所在的层的输入维度为 ![[公式]](https://www.zhihu.com/equation?tex=m) ，输出维度为 ![[公式]](https://www.zhihu.com/equation?tex=n) ，那么参数将从 ![[公式]](https://www.zhihu.com/equation?tex=%5Cleft%28+-%5Csqrt%7B%5Cfrac%7B6%7D%7Bm%2Bn%7D%7D%2C%5Csqrt%7B%5Cfrac%7B6%7D%7Bm%2Bn%7D%7D+%5Cright%29) 均匀分布中采样
+
 当激活函数为ReLU函数时，可随机初始化参数（$n^{[l]}$表示第l层的神经元数）：
 $$
 w^{[l]}=np.random.randn(n^{[l]},n^{[l-1]}) * np.sqrt(\frac{2}{n^{[l-1]}})
@@ -400,7 +402,7 @@ $$
 $$
 w^{[l]}=np.random.randn(n^{[l]},n^{[l-1]}) * np.sqrt(\frac{2}{n^{[l-1]}+n^{[l]}})
 $$
-
+**He initialization**
 
 
 
