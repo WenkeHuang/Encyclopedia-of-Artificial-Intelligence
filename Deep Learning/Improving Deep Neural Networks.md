@@ -229,6 +229,8 @@ Dropout可以比较有效的缓解过拟合的发生，在一定程度上达到�
 
 <img src="../img/DL/EarlyStopping.jpg" alt="EarlyStopping" style="zoom:80%;" />
 
+# 归一化、标准化
+
 
 
 
