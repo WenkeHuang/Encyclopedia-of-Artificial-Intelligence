@@ -179,7 +179,7 @@ $$
 
 > M是模型的阶次（表现形式是数据的维度），比如M=2，就是一个平面（二维）内的点
 
-
+<img src="../img/DL/Regularizationdimension.jpg" alt="Regularizationdimension" style="zoom:80%;" />
 
 
 
