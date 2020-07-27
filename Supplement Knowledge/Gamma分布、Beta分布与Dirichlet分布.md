@@ -23,7 +23,12 @@ Gamma函数如下：
 
 
 
+如下函数被称为Digamma函数：
 
+![[公式]](https://www.zhihu.com/equation?tex=%5CPsi%3D%5Cfrac%7Bd~log%5CGamma%28x%29%7D%7Bdx%7D%5C%5C)
+Digamma函数具有如下性质：
+
+![[公式]](https://www.zhihu.com/equation?tex=%5CPsi%28x%2B1%29%3D%5CPsi%28x%29%2B%5Cfrac%7B1%7D%7Bx%7D%5C%5C)
 
 
 
