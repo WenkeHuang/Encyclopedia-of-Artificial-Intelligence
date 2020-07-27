@@ -191,6 +191,8 @@ $L2$正则化是常见的正则化类型，而$L1$：$\sum_{j=1}^{n_x}|w|$，如
 
 ## dropout 正则化
 
+Dropout可以比较有效的缓解过拟合的发生，在一定程度上达到正则化的效果。
+
 <img src="../img/DL/dropout.png" alt="dropout" style="zoom:80%;" />
 
 
