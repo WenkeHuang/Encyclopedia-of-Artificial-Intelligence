@@ -428,7 +428,7 @@ w = np.random.randn(node_in, node_out) / np.sqrt(node_in/2)
 
 如果不想从零开始训练神经网络时，我们往往选择一个已经在任务A上训练好的模型（称为pre-trained model），将其放在任务B上做模型调整（称为fine-tuning）
 
-
+**梯度检验**
 
 
 
