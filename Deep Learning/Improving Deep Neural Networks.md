@@ -420,6 +420,12 @@ w = np.random.randn(node_in, node_out) / np.sqrt(node_in/2)
 
 效果是比Xavier initialization好很多。现在神经网络中，隐藏层常使用ReLU，权重初始化常用He initialization这种方法。
 
+**Batch Normalization Layer**
+
+在网络中间层中使用 Batch Normalization 层一定程度上能够减缓对较好的网络参数初始化的依赖，使用方差较小的参数分布即可。
+
+**pre-training**
+
 
 
 
