@@ -261,7 +261,7 @@ $$
 
 上图则是一个散点序列的标准化过程：原图->减去均值->除以标准差。
 
-
+<img src="../img/DL/normalizeinput.jpg" alt="normalizeinput" style="zoom:80%;" />
 
 
 
