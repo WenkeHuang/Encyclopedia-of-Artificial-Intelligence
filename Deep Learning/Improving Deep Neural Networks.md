@@ -189,7 +189,16 @@ $$
 
 $L2$正则化是常见的正则化类型，而$L1$：$\sum_{j=1}^{n_x}|w|$，如果用的是$L1$正则化，最终会是稀疏的，也就是说向量中有很多0，有人说这样有利于压缩模型，因为集合中参数均为0，存储模型所占用的内存更少。实际上，虽然正则化使模型变得稀疏，却没有降低太多存储内存，所以我认为这并不是$L1$正则化的目的，至少不是为了压缩模型，人们在训练网络时，越来越倾向于使用$L2$正则化。
 
-zheng ze hua
+**范数合集：**
+
+
+![[公式]](https://www.zhihu.com/equation?tex=L_%7B0%7D) 范数： ![[公式]](https://www.zhihu.com/equation?tex=%5Cleft+%5C%7C+w+%5Cright+%5C%7C_%7B0%7D+%3D+%5C%23%28i%29%5C+with+%5C+x_%7Bi%7D+%5Cneq+0) *（非零元素的个数）*
+
+![[公式]](https://www.zhihu.com/equation?tex=L_%7B1%7D) 范数： ![[公式]](https://www.zhihu.com/equation?tex=%5Cleft+%5C%7C+w+%5Cright+%5C%7C_%7B1%7D+%3D+%5Csum_%7Bi+%3D+1%7D%5E%7Bd%7D%5Clvert+x_i%5Crvert) *（每个元素绝对值之和）*
+
+![[公式]](https://www.zhihu.com/equation?tex=L_%7B2%7D) 范数： ![[公式]](https://www.zhihu.com/equation?tex=%5Cleft+%5C%7C+w+%5Cright+%5C%7C_%7B2%7D+%3D+%5CBigl%28%5Csum_%7Bi+%3D+1%7D%5E%7Bd%7D+x_i%5E2%5CBigr%29%5E%7B1%2F2%7D) *（欧氏距离）*
+
+![[公式]](https://www.zhihu.com/equation?tex=L_%7Bp%7D) 范数： ![[公式]](https://www.zhihu.com/equation?tex=%5Cleft+%5C%7C+w+%5Cright+%5C%7C_%7Bp%7D+%3D+%5CBigl%28%5Csum_%7Bi+%3D+1%7D%5E%7Bd%7D+x_i%5Ep%5CBigr%29%5E%7B1%2Fp%7D)
 
 ## dropout 正则化
 
