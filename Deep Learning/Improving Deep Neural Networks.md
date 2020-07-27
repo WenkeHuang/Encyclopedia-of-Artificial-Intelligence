@@ -382,7 +382,11 @@ w = np.random.randn(node_in, node_out) * 1.0
 
 <img src="../img/DL/randominitialize2.jpg" alt="randominitialize2" style="zoom:80%;" />
 
+**Xavier初始化**
 
+Xavier初始化可以帮助减少梯度消失的问题，使得信号在神经网络中可以传递得更深，在经过多层神经元后保持在合理的范围（不至于太小或太大）。
+
+**Xavier初始化的基本思想：**保持输入和输出的方差一致（服从相同的分布），这样就避免了所有输出值都趋向于0。
 
 当激活函数为ReLU函数时，可随机初始化参数（$n^{[l]}$表示第l层的神经元数）：
 $$
