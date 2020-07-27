@@ -370,7 +370,15 @@ LSTM全称是长短期记忆网络（long-short term memory networks），是不
 w = np.random.randn( node_in, node_out) * 0.01
 ```
 
+<img src="../img/DL/randominitialize.jpg" alt="randominitialize" style="zoom:80%;" />
 
+随着层数的增加，我们看到输出值迅速向0靠拢，在后几层中，几乎所有的输出值 x 都很接近0。高斯初始化，给权重较小的值，这种更新方式在小型网络中很常见，然而当网络deep的时候，会出现**梯度消失**的情况。
+
+但是如果把**权重初始成一个比较大的值**，如均值为0，方差为1的高斯分布：
+
+```text
+w = np.random.randn(node_in, node_out) * 1.0
+```
 
 
 
