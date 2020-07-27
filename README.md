@@ -34,5 +34,5 @@ I have the Artificial Intelligence knowledge you want.
 ## Personal Information
 Major：Software engineering & finance    
 Research Areas：Full Stack development & Computer Vision & Econometrics    
-[Blog](https://blog.csdn.net/qq_41409438) 
+[CSDN Blog](https://blog.csdn.net/qq_41409438) 
 ## Seize the day, boys. Make your lives extraordinary.
