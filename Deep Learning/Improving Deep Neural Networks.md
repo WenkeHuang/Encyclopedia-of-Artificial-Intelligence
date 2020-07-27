@@ -351,7 +351,17 @@ LSTM全称是长短期记忆网络（long-short term memory networks），是不
 梯度消失和梯度爆炸的解决办法之一就是更谨慎的选择随机初始化参数。
 
 当激活函数为ReLU函数时，可随机初始化参数（$n^{[l]}$表示第l层的神经元数）：
-
+$$
+w^{[l]}=np.random.randn(n^{[l]},n^{[l-1]}) * np.sqrt(\frac{2}{n^{[l-1]}})
+$$
+当激活函数为tanh函数时，可随机初始化参数：
+$$
+w^{[l]}=np.random.randn(n^{[l]},n^{[l-1]}) * np.sqrt(\frac{1}{n^{[l-1]}})
+$$
+这种方式称为**Xavier初始化**。或者也可以：
+$$
+w^{[l]}=np.random.randn(n^{[l]},n^{[l-1]}) * np.sqrt(\frac{2}{n^{[l-1]}+n^{[l]}})
+$$
 
 
 
