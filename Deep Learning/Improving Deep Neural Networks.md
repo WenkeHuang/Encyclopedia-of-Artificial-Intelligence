@@ -253,9 +253,9 @@ $$
 
 下面我们将探讨最常见的标准化方法： **Z-Score 标准化**。
 $$
-x_{new}=\frac{x-\mu}{\cigma}
+x_{new}=\frac{x-\mu}{\sigma}
 $$
-
+其中 ![[公式]](https://www.zhihu.com/equation?tex=%5Cmu) 是样本数据的**均值（mean）**， ![[公式]](https://www.zhihu.com/equation?tex=%5Csigma) 是样本数据的**标准差（std）**。
 
 
 
