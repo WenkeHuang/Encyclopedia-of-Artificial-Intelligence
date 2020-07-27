@@ -257,7 +257,9 @@ x_{new}=\frac{x-\mu}{\sigma}
 $$
 其中 ![[公式]](https://www.zhihu.com/equation?tex=%5Cmu) 是样本数据的**均值（mean）**， ![[公式]](https://www.zhihu.com/equation?tex=%5Csigma) 是样本数据的**标准差（std）**。
 
+<img src="../img/DL/ZScore.jpg" alt="ZScore" style="zoom:80%;" />
 
+上图则是一个散点序列的标准化过程：原图->减去均值->除以标准差。
 
 
 
