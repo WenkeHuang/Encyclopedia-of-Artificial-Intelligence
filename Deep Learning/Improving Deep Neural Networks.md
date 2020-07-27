@@ -181,7 +181,9 @@ $$
 
 <img src="../img/DL/Regularizationdimension.jpg" alt="Regularizationdimension" style="zoom:80%;" />
 
+直观理解：
 
+<img src="../img/DL/Regularizationdimension2.jpg" alt="Regularizationdimension2" style="zoom:80%;" />
 
 
 
