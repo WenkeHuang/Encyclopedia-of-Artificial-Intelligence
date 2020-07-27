@@ -24,7 +24,13 @@
 
 在神经网络的计算中，通常先有一个叫做前向暂停(**forward pause**)或叫做前向传播(**foward propagation**)的步骤，接着有一个叫做反向暂停(**backward pause**) 或叫做反向传播**(backward propagation**)的步骤。
 
+## 梯度下降
 
+- 给到 $\theta$(weight and bias)
+- 先选择一个初始的 $\theta^0$，计算 $\theta^0$ 的损失函数（Loss Function）设一个参数的偏微分
+- 计算完这个向量（vector）偏微分，然后就可以去更新的你$\theta$
+- 百万级别的参数（millions of parameters）
+- 反向传播（Backpropagation）是一个比较有效率的算法，让你计算梯度（Gradient） 的向量（Vector）时，可以有效率的计算出来
 
 
 
