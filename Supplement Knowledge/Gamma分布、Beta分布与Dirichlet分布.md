@@ -30,6 +30,51 @@ Digamma函数具有如下性质：
 
 ![[公式]](https://www.zhihu.com/equation?tex=%5CPsi%28x%2B1%29%3D%5CPsi%28x%29%2B%5Cfrac%7B1%7D%7Bx%7D%5C%5C)
 
+## 从二项分布到Gamma函数
+
+对Gamma函数做个变形，可以得到如下式子：
+
+![[公式]](https://www.zhihu.com/equation?tex=%5Cint+_%7B0%7D%5E%7B%5Cinfty%7D%5Cfrac%7Bt%5E%7B%5Calpha-1%7De%5E%7B-t%7Ddt%7D%7B%5CGamma%28%5Calpha%29%7D%3D1%5C%5C)
+取积分中的函数作为概率密度，就得到一个简单的Gamma分布的密度函数：
+
+![[公式]](https://www.zhihu.com/equation?tex=Gamma%28t%7C%5Calpha%29%3D%5Cfrac%7Bt%5E%7B%5Calpha-1%7De%5E%7B-t%7D%7D%7B%5CGamma%28%5Calpha%29%7D%5C%5C)
+如果做一个变换 ![[公式]](https://www.zhihu.com/equation?tex=t%3D%5Cbeta+x) ，就得到Gamma分布的更一般形式：
+
+![[公式]](https://www.zhihu.com/equation?tex=Gamma%28x%7C%5Calpha%2C%5Cbeta%29%3D%5Cfrac%7B%5Cbeta%5E%7B%5Calpha%7Dx%5E%7B%5Calpha-1%7De%5E%7B-%5Cbeta+x%7D%7D%7B%5CGamma%28%5Calpha%29%7D%5C%5C)
+其中 ![[公式]](https://www.zhihu.com/equation?tex=%5Calpha) 称为shape parameter，主要决定了分布曲线的形状，而 ![[公式]](https://www.zhihu.com/equation?tex=%5Cbeta) 称为rate parameter或inverse scale parameter（ ![[公式]](https://www.zhihu.com/equation?tex=%5Cfrac%7B1%7D%7B%5Cbeta%7D) scale parameter），主要决定曲线有多陡。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
