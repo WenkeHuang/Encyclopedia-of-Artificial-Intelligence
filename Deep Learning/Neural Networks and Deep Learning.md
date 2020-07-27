@@ -49,7 +49,13 @@
 
 我们的目标是要求计算$\frac{\partial z}{\partial w}$（Forward pass的部分）和计算$\frac{\partial l}{\partial z}$( Backward pass的部分 )，然后把$\frac{\partial z}{\partial w}$和$\frac{\partial l}{\partial z}$相乘，我们就可以得到$\frac{\partial l}{\partial w}$,所有我们就可以得到神经网络中所有的参数，然后用梯度下降就可以不断更新，得到损失最小的函数
 
+## 参数VS超参数
 
+什么是超参数？
+
+比如算法中的**learning rate** （学习率）、**iterations**(梯度下降法循环的数量)、L（隐藏层数目）、$n^{[l]}$（隐藏层单元数目）、**choice of activation function**（激活函数的选择）都需要你来设置，这些数字实际上控制了最后的参数W和b的值，所以它们被称作超参数。
+
+实际上深度学习有很多不同的超参数，如**momentum**、**mini batch size**、**regularization parameters**等等。
 
 
 
