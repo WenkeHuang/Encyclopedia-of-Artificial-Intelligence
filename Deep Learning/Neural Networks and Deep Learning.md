@@ -22,6 +22,8 @@
 
 # Basics of Neural Network programming
 
+在神经网络的计算中，通常先有一个叫做前向暂停(**forward pause**)或叫做前向传播(**foward propagation**)的步骤，接着有一个叫做反向暂停(**backward pause**) 或叫做反向传播**(backward propagation**)的步骤。
+
 
 
 
