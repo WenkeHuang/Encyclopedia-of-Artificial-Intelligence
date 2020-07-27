@@ -57,6 +57,8 @@
 
 实际上深度学习有很多不同的超参数，如**momentum**、**mini batch size**、**regularization parameters**等等。
 
+一般按照走**Idea—Code—Experiment—Idea**这个循环，尝试各种不同的参数，实现模型并观察是否成功，然后再迭代。
+
 
 
 
