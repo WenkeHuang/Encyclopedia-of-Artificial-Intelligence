@@ -1,5 +1,41 @@
 # Introduction to deep learning 
 
+深度学习的三步走：
+
+- Step1：神经网络（Neural network）
+- Step2：模型评估（Goodness of function）
+- Step3：选择最优函数（Pick best function）
+
+## Step1 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
