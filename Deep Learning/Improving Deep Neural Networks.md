@@ -294,6 +294,8 @@ $$
 
 Batch Normalization 由两部分组成，第一部分是**缩放与平移（scale and shift）**，第二部分是**训练缩放尺度和平移的参数（train a BN Network）**
 
+# 梯度消失/梯度爆炸
+
 
 
 
