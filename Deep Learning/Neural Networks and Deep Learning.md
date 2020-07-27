@@ -34,10 +34,12 @@
 
 ## 链式法则
 
-![Chain Rule](../)
+<img src="../img/DL/ChainRule.png" alt="Chain Rule" style="zoom:80%;" />
 
 - 连锁影响(可以看出x会影响y，y会影响z)
 - BP主要用到了chain rule
+
+## 反向传播
 
 
 
