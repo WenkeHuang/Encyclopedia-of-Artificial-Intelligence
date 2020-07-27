@@ -380,6 +380,8 @@ w = np.random.randn( node_in, node_out) * 0.01
 w = np.random.randn(node_in, node_out) * 1.0
 ```
 
+<img src="../img/DL/randominitialize2.jpg" alt="randominitialize2" style="zoom:80%;" />
+
 
 
 当激活函数为ReLU函数时，可随机初始化参数（$n^{[l]}$表示第l层的神经元数）：
