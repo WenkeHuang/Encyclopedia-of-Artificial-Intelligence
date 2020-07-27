@@ -32,7 +32,7 @@
 - 百万级别的参数（millions of parameters）
 - 反向传播（Backpropagation）是一个比较有效率的算法，让你计算梯度（Gradient） 的向量（Vector）时，可以有效率的计算出来
 
-
+## 链式法则
 
 
 
