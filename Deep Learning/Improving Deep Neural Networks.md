@@ -143,7 +143,45 @@ $$
 
 <img src="../img/DL/overfit.jpg" alt="Overfitting" style="zoom:80%;" />
 
-## 
+## 二次正则项
+
+线性的损失函数
+$$
+E(w)=\frac{1}{2}\sum_{n=1}^N\{t_n-w^T\}
+$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
