@@ -410,9 +410,15 @@ $$
 
 主要想要解决的问题是由于经过relu后，方差会发生变化，因此我们初始化权值的方法也应该变化。只考虑输入个数时，MSRA初始化是一个均值为0，方差为2/n的高斯分布：
 $$
-w \sim
+w \sim [0,\sqrt\frac{2}{n}]
 $$
+**He initialization的思想是：**在ReLU网络中，假定每一层有一半的神经元被激活，另一半为0（x负半轴中是不激活的），所以要保持variance不变，只需要在Xavier的基础上再除以2：
 
+```text
+w = np.random.randn(node_in, node_out) / np.sqrt(node_in/2)
+```
+
+效果是比Xavier initialization好很多。现在神经网络中，隐藏层常使用ReLU，权重初始化常用He initialization这种方法。
 
 
 
