@@ -585,6 +585,24 @@ $$
 
 **RMSprop**
 
+RMSprop可以算作Adadelta的一个特例： 
+
+ 当![[公式]](https://www.zhihu.com/equation?tex=%5Crho%3D0.5)时，![[公式]](https://www.zhihu.com/equation?tex=E%7Cg%5E2%7C_t%3D%5Crho%2AE%7Cg%5E2%7C_%7Bt-1%7D%2B%281-%5Crho%29%2Ag_t%5E2)就变为了求梯度平方和的平均数。 
+
+如果再求根的话，就变成了RMS(均方根)： 
+
+![[公式]](https://www.zhihu.com/equation?tex=RMS%7Cg%7C_t%3D%5Csqrt%7BE%7Cg%5E2%7C_t%2B%5Cepsilon%7D)
+
+此时，这个RMS就可以作为学习率![[公式]](https://www.zhihu.com/equation?tex=%5Ceta)的一个约束： 
+
+![[公式]](https://www.zhihu.com/equation?tex=%5CDelta%7Bx_t%7D%3D-%5Cfrac%7B%5Ceta%7D%7BRMS%7Cg%7C_t%7D%2Ag_t)
+
+**特点：**
+
+- 其实RMSprop依然依赖于全局学习率 
+- RMSprop算是Adagrad的一种发展，和Adadelta的变体，效果趋于二者之间
+- 适合处理非平稳目标 - 对于RNN效果很好
+
 
 
 
