@@ -24,7 +24,9 @@ I have the Artificial Intelligence knowledge you want.
 [21. PageRank算法](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Machine%20Learning/21.%20PageRank%E7%AE%97%E6%B3%95.md)
 ## Deep Learning
 [Neural Networks and Deep Learning](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Deep%20Learning/Neural%20Networks%20and%20Deep%20Learning.md)<br>
-[](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Deep%20Learning/Improving%20Deep%20Neural%20Networks.md)
+[Improving Deep Neural Networks](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Deep%20Learning/Improving%20Deep%20Neural%20Networks.md)<br>
+[Convolutional Neural Networks](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Deep%20Learning/Convolutional%20Neural%20Networks.md)<br>
+[Natural Language Processing: Building sequence models](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Deep%20Learning/Natural%20Language%20Processing:%20Building%20sequence%20models.md)
 ## Reference books and courses
 - 统计学习方法 第二版 李航
 - cs229: Machine Learning Stanford University
