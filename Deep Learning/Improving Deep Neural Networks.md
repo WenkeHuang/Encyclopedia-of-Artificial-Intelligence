@@ -603,7 +603,9 @@ RMSprop可以算作Adadelta的一个特例：
 - RMSprop算是Adagrad的一种发展，和Adadelta的变体，效果趋于二者之间
 - 适合处理非平稳目标 - 对于RNN效果很好
 
+**Adam算法**
 
+Adam算法**即自适应时刻估计方法（Adaptive Moment Estimation）**，能计算每个参数的自适应学习率。这个方法不仅存储了AdaDelta先前平方梯度的指数衰减平均值，而且保持了先前梯度M(t)的指数衰减平均值，这一点与动量类似：
 
 
 
