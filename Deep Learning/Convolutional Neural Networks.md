@@ -64,7 +64,21 @@
 
 在CNN中，进行卷积操作时一般会以卷积核模块的一个位置为基准进行滑动，这个基准通常就是卷积核模块的中心。若卷积核为奇数，卷积锚点很好找，自然就是卷积模块中心，但如果卷积核是偶数，这时候就没有办法确定了，让谁是锚点似乎都不怎么好。
 
+**【卷积的计算公式】**
 
+**输入图片的尺寸：**一般用 ![[公式]](https://www.zhihu.com/equation?tex=n%5Ctimes+n) 表示输入的image大小。
+
+**卷积核的大小：**一般用 ![[公式]](https://www.zhihu.com/equation?tex=f%5Ctimes+f) 表示卷积核的大小。
+
+**填充（Padding）：**一般用 ![[公式]](https://www.zhihu.com/equation?tex=p) 来表示填充大小。
+
+**步长(Stride)：**一般用 ![[公式]](https://www.zhihu.com/equation?tex=s) 来表示步长大小。
+
+**输出图片的尺寸：**一般用 ![[公式]](https://www.zhihu.com/equation?tex=o) 来表示。
+
+如果已知 ![[公式]](https://www.zhihu.com/equation?tex=n) 、 ![[公式]](https://www.zhihu.com/equation?tex=f) 、 ![[公式]](https://www.zhihu.com/equation?tex=p) 、 ![[公式]](https://www.zhihu.com/equation?tex=s) 可以求得 ![[公式]](https://www.zhihu.com/equation?tex=o) ，**计算公式如下：**![[公式]](https://www.zhihu.com/equation?tex=o%3D%5Clfloor+%5Cfrac%7Bn+%2B+2p+-+f%7D%7Bs%7D++%5Crfloor+%2B+1)
+
+其中"![[公式]](https://www.zhihu.com/equation?tex=%5Clfloor+%5C+%5Crfloor)"是向下取整符号，用于结果不是整数时进行向下取整。
 
 
 
