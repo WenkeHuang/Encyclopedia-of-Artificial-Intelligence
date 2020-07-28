@@ -543,7 +543,9 @@ momentum首先计算一个梯度(短的蓝色向量)，然后在加速更新梯�
 **AdaGrad**
 
 定义参数：全局学习率$\delta$，一般会选择 ![[公式]](https://www.zhihu.com/equation?tex=%5Cdelta%3D0.01) ; 一个极小的常量 ![[公式]](https://www.zhihu.com/equation?tex=%5Cepsilon) ，通常取值10e-8,目的是为了不让分母为0; 梯度加速变量(gradient accumulation variable) ![[公式]](https://www.zhihu.com/equation?tex=r) 。
-
+$$
+g \nabla
+$$
 
 
 
