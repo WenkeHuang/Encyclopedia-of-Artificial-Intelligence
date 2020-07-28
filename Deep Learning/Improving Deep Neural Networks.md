@@ -551,6 +551,10 @@ r \gets r + g^2 \\
 $$
 从上式可以看出，梯度加速变量r为t时刻前梯度的平方和 ![[公式]](https://www.zhihu.com/equation?tex=r+%3D+%5Csum_%7Bi%3D1%7D%5E%7Bt%7D+g_%7Bi%7D%5E%7B2%7D) , 那么参数更新量 ![[公式]](https://www.zhihu.com/equation?tex=%5Ctriangle+%5Ctheta%3D%5Cdelta+%5Ccdot+%5Cfrac%7B1%7D%7B%5Csqrt%7B%5Csum_%7Bi%3D1%7D%5E%7Bt%7Dg_%7Bi%7D%5E%7B2%7D+%2B+%5Cdelta%7D%7D+%5Ccdot+g) ，将 ![[公式]](https://www.zhihu.com/equation?tex=%5Cfrac%7B1%7D%7B%5Csqrt%7B%5Csum_%7Bi%3D1%7D%5E%7Bt%7Dg_%7Bi%7D%5E%7B2%7D+%2B+%5Cdelta%7D%7D) 看成一个约束项regularizer. 在前期，梯度累计平方和比较小，也就是r相对较小，则约束项较大，这样就能够放大梯度, 参数更新量变大; 随着迭代次数增多，梯度累计平方和也越来越大，即r也相对较大，则约束项变小，这样能够缩小梯度，参数更新量变小。
 
+训练前期，梯度较小，使得Regularizer项很大，放大梯度。**[激励阶段]**
+
+训练后期，梯度较大，使得Regularizer项很小，缩小梯度。**[惩罚阶段]**
+
 **缺点：**
 
 - 仍需要手工设置一个全局学习率 ![[公式]](https://www.zhihu.com/equation?tex=%5Cdelta) , 如果 ![[公式]](https://www.zhihu.com/equation?tex=%5Cdelta) 设置过大的话，会使regularizer过于敏感，对梯度的调节太大
