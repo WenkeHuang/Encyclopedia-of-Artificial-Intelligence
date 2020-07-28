@@ -570,9 +570,20 @@ $$
 
 在此处Adadelta其实还是依赖于全局学习率的，但是作者做了一定处理，经过近似牛顿迭代法之后：
 
+![[公式]](https://www.zhihu.com/equation?tex=E%7Cg%5E2%7C_t%3D%5Crho%2AE%7Cg%5E2%7C_%7Bt-1%7D%2B%281-%5Crho%29%2Ag_t%5E2)
 
+![[公式]](https://www.zhihu.com/equation?tex=%5CDelta%7Bx_t%7D%3D-%5Cfrac%7B%5Csqrt%7B%5Csum_%7Br%3D1%7D%5E%7Bt-1%7D%5CDelta%7Bx_r%7D%7D%7D%7B%5Csqrt%7BE%7Cg%5E2%7C_t%2B%5Cepsilon%7D%7D)
 
+其中，![[公式]](https://www.zhihu.com/equation?tex=E)代表求期望。
 
+此时，可以看出Adadelta已经不用依赖于全局学习率了。
+
+**特点：**
+
+- 训练初中期，加速效果不错，很快
+- 训练后期，反复在局部最小值附近抖动
+
+**RMSprop**
 
 
 
