@@ -546,6 +546,7 @@ momentum首先计算一个梯度(短的蓝色向量)，然后在加速更新梯�
 $$
 g \gets \nabla_{\theta}J(\theta) \\
 r \gets r + g^2 \\
+\Delta \theta \gets \frac{\delta}{\sqrt{r+\varepsilon}}
 $$
 
 
