@@ -540,7 +540,9 @@ momentum首先计算一个梯度(短的蓝色向量)，然后在加速更新梯�
 
 在机器学习中，学习率是一个非常重要的超参数，但是学习率是非常难确定的，虽然可以通过多次训练来确定合适的学习率，但是一般也不太确定多少次训练能够得到最优的学习率，玄学事件，对人为的经验要求比较高，所以是否存在一些策略自适应地调节学习率的大小，从而提高训练速度。 目前的自适应学习率优化算法主要有：AdaGrad算法，RMSProp算法，Adam算法以及AdaDelta算法。
 
+**AdaGrad**
 
+定义参数：全局学习率$\delta$，一般会选择 ![[公式]](https://www.zhihu.com/equation?tex=%5Cdelta%3D0.01) ; 一个极小的常量 ![[公式]](https://www.zhihu.com/equation?tex=%5Cepsilon) ，通常取值10e-8,目的是为了不让分母为0; 梯度加速变量(gradient accumulation variable) ![[公式]](https://www.zhihu.com/equation?tex=r) 。
 
 
 
