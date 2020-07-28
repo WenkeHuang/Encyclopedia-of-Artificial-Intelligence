@@ -603,7 +603,20 @@ RMSprop可以算作Adadelta的一个特例：
 - RMSprop算是Adagrad的一种发展，和Adadelta的变体，效果趋于二者之间
 - 适合处理非平稳目标 - 对于RNN效果很好
 
+**Adam: Adaptive Moment Estimation**
 
+Adam中动量直接并入了梯度一阶矩（指数加权）的估计。其次，相比于缺少修正因子导致二阶矩估计可能在训练初期具有很高偏置的RMSProp，Adam包括偏置修正，修正从原点初始化的一阶矩（动量项）和（非中心的）二阶矩估计。 默认参数值设定为： ![[公式]](https://www.zhihu.com/equation?tex=%5Cbeta_%7B1%7D+%3D+0.9%2C+%5Cbeta_%7B2%7D+%3D+0.999%2C+%5Cepsilon%3D10%5E%7B-8%7D)
+
+
+
+*其中，* ![[公式]](https://www.zhihu.com/equation?tex=m_%7Bt%7D) ， ![[公式]](https://www.zhihu.com/equation?tex=n_%7Bt%7D) 分别是对梯度的一阶矩估计和二阶矩估计； ![[公式]](https://www.zhihu.com/equation?tex=%5Chat%7Bm%7D_%7Bt%7D) *，* ![[公式]](https://www.zhihu.com/equation?tex=%5Chat%7Bn%7D_%7Bt%7D) 是对 ![[公式]](https://www.zhihu.com/equation?tex=m_%7Bt%7D)， ![[公式]](https://www.zhihu.com/equation?tex=n_%7Bt%7D)的偏差校正，这样可以近似为对期望的无偏估计
+
+**特点：**
+
+- Adam梯度经过偏置校正后，每一次迭代学习率都有一个固定范围，使得参数比较平稳。
+- 结合了Adagrad善于处理稀疏梯度和RMSprop善于处理非平稳目标的优点
+- 为不同的参数计算不同的自适应学习率
+- 也适用于大多非凸优化问题——适用于大数据集和高维空间。
 
 <img src="../img/DL/optimizer.gif" alt="optimizer" style="zoom:80%;" />
 
