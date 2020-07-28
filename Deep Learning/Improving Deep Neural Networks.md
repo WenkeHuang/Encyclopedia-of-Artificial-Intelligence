@@ -605,6 +605,36 @@ RMSprop可以算作Adadelta的一个特例：
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <img src="../img/DL/optimizer.gif" alt="optimizer" style="zoom:80%;" />
 
 
