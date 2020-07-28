@@ -484,15 +484,17 @@ w = np.random.randn(node_in, node_out) / np.sqrt(node_in/2)
 
 批梯度下降法(Batch Gradient Descent)针对的是整个数据集，通过对所有的样本的计算来求解梯度的方向。
 $$
-
+\frac{\delta J(\theta)}{\delta \theta j } =\sum_{i=1}^m(h_{\theta}(x^{(i)}-y^{(i)})x_j^{(i)}
 $$
+进一步得到了迭代式：
+$$
+\theta^{'}_j = \theta_j - \alpha \frac{\delta J(\theta)}{\delta \theta _j}
+$$
+每迭代一步，都要用到训练集所有的数据，如果样本数目很大，那么可想而知这种方法的迭代速度
 
-
-
-
-
-
-
+优点：全局最优解；易于并行实现；
+缺点：当样本数目很多时，训练过程会很慢。
+从迭代的次数上来看，BGD迭代的次数相对较少。其迭代的收敛曲线示意图可以表示如下：
 
 
 
