@@ -616,7 +616,7 @@ $$
 
 则参数更新的最终公式为：
 $$
-\theta_{t+1} = \theta _{t} - \frac{n}{}
+\theta_{t+1} = \theta _{t} - \frac{n}{\sqrt{\widehat{v}_t}+\epsilon}\widehat{m}_t
 $$
 
 
