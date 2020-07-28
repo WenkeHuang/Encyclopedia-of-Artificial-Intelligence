@@ -18,6 +18,44 @@
 
 <img src="../img/DL/VerticalEdge.png" alt="VerticalEdge" style="zoom:80%;" />
 
+## Padding
+
+为了构建深度神经网络，你需要学会使用的一个基本的卷积操作就是**padding**，让我们来看看它是如何工作的。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
