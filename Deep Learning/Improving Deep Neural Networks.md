@@ -474,6 +474,8 @@ w = np.random.randn(node_in, node_out) / np.sqrt(node_in/2)
 
 
 
+# 优化函数
+
 
 
 
