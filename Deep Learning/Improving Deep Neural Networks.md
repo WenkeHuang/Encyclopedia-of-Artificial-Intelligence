@@ -526,6 +526,12 @@ momentum算法思想：参数更新时在一定程度上保留之前更新的方
 
 **NAG（Nesterov accelerated gradient）**
 
+momentum保留了上一时刻的梯度 ![[公式]](https://www.zhihu.com/equation?tex=%5Ctriangledown_%7B%5Ctheta%7D+J+%5Cleft%28%5Ctheta+%5Cright%29) ，对其没有进行任何改变，NAG是momentum的改进，在梯度更新时做一个矫正，具体做法就是在当前的梯度 ![[公式]](https://www.zhihu.com/equation?tex=%5Ctriangledown_%7B%5Ctheta%7D+J+%5Cleft%28%5Ctheta+%5Cright%29) 上添加上一时刻的动量 ![[公式]](https://www.zhihu.com/equation?tex=%5Cmu+%5Ccdot+m_%7Bt%7D) ，梯度改变为 ![[公式]](https://www.zhihu.com/equation?tex=%5Ctriangledown_%7B%5Ctheta%7D+J+%5Cleft%28%5Ctheta+-+%5Cmu+%5Ccdot+m_%7Bt%7D%5Cright%29) 。
+
+![[公式]](https://www.zhihu.com/equation?tex=%5C%5C++m_%7Bt%2B1%7D%3D%5Cmu+%5Ccdot+m_%7Bt%7D+%2B+%5Calpha+%5Ccdot+%5Ctriangledown_%7B%5Ctheta%7D+J+%5Cleft%28%5Ctheta+-+%5Cmu+%5Ccdot+m_%7Bt%7D+%5Cright%29+%5C%5C++%5Ctheta_%7Bt%2B1%7D%3D%5Ctheta_%7Bt%7D+-+m_%7Bt%2B1%7D+)
+
+加上nesterov项后，梯度在大的跳跃后，进行计算对当前梯度进行校正。 下图是momentum和nesterrov的对比表述图：
+
 
 
 
