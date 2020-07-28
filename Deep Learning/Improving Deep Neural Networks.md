@@ -520,9 +520,11 @@ $$
 
 momentum算法思想：参数更新时在一定程度上保留之前更新的方向，同时又利用当前batch的梯度微调最终的更新方向，简言之就是通过积累之前的动量来加速当前的梯度。假设 ![[公式]](https://www.zhihu.com/equation?tex=m_%7Bt%7D) 表示t时刻的动量， ![[公式]](https://www.zhihu.com/equation?tex=%5Cmu) 表示动量因子，通常取值0.9或者近似值，在SGD的基础上增加动量，则参数更新公式如下：
 
+![[公式]](https://www.zhihu.com/equation?tex=%5C%5C+m_%7Bt%2B1%7D%3D%5Cmu+%5Ccdot+m_%7Bt%7D+%2B+%5Calpha+%5Ccdot+%5Ctriangledown_%7B%5Ctheta%7D+J+%5Cleft%28%5Ctheta+%5Cright%29+%5C%5C+%5Ctheta_%7Bt%2B1%7D%3D%5Ctheta_%7Bt%7D+-+m_%7Bt%2B1%7D)
 
+在梯度方向改变时，momentum能够降低参数更新速度，从而减少震荡；在梯度方向相同时，momentum可以加速参数更新， 从而加速收敛。总而言之，momentum能够加速SGD收敛，抑制震荡。
 
-
+**NAG（Nesterov accelerated gradient）**
 
 
 
