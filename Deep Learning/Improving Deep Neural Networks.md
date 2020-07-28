@@ -564,10 +564,11 @@ $$
 
 Adadelta是对Adagrad的扩展，最初方案依然是对学习率进行自适应约束，但是进行了计算上的简化。 Adagrad会累加之前所有的梯度平方，而Adadelta只累加固定大小的项，并且也不直接存储这些项，仅仅是近似计算对应的平均值。即
 $$
-n_t = v * n_{t-1}+(1-v) *g_t^2\\
-\Delta\theta_t = -\frac{}{}
+n_t = v * n_{t-1}+(1-v) *g_t^2
 $$
+![[公式]](https://www.zhihu.com/equation?tex=%5CDelta%7B%5Ctheta_t%7D+%3D+-%5Cfrac%7B%5Ceta%7D%7B%5Csqrt%7Bn_t%2B%5Cepsilon%7D%7D%2Ag_t)
 
+在此处Adadelta其实还是依赖于全局学习率的，但是作者做了一定处理，经过近似牛顿迭代法之后：
 
 
 
