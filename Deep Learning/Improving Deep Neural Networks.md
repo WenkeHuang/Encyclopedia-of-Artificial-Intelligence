@@ -607,6 +607,11 @@ RMSprop可以算作Adadelta的一个特例：
 
 Adam算法**即自适应时刻估计方法（Adaptive Moment Estimation）**，能计算每个参数的自适应学习率。这个方法不仅存储了AdaDelta先前平方梯度的指数衰减平均值，而且保持了先前梯度M(t)的指数衰减平均值，这一点与动量类似：
 
+M(t)为梯度的第一时刻平均值，V(t)为梯度的第二时刻非中心方差值。
+$$
+\widehat{m}_t = \frac{m_t}{1-\beta_1^t} \\
+\widehat{v}_t = \frac{n_t}{1-\beta_1^t}
+$$
 
 
 
