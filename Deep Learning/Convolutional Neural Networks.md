@@ -277,6 +277,8 @@ $$
 
 <img src="../img/DL/resnet2.png" alt="resnet2" style="zoom:75%;" />
 
+## 1 x 1 卷积
+
 
 
 
