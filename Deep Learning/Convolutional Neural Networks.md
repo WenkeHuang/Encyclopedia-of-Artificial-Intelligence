@@ -389,7 +389,11 @@ Inception网络框架中会有额外的两个softmadx预测层，这两个预测
 
 ## Bounding Box预测
 
+<img src="../img/DL/BoundingBOx.png" alt="BoudningBox" style="zoom:80%;" />
+
 在滑动窗口法中，你取这些离散的位置集合，然后在它们上运行分类器，在这种情况下，这些边界框没有一个能完美匹配汽车位置，也许这个框（编号1）是最匹配的了。还有看起来这个真实值，最完美的边界框甚至不是方形，稍微有点长方形（红色方框所示），长宽比有点向水平方向延伸，有没有办法让这个算法输出更精准的边界框呢？
+
+其中一个能得到更精准边界框的算法是**YOLO**算法，**YOLO**(**You only look once**)意思是你只看一次，这是由**Joseph Redmon**，**Santosh Divvala**，**Ross Girshick**和**Ali Farhadi**提出的算法。
 
 
 
