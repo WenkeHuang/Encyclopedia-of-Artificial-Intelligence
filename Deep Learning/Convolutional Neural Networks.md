@@ -176,6 +176,8 @@ Convolution、Pooling、Fully connected
 
 <img src="../img/DL/AlexNet.png" alt="AlexNet" style="zoom:80%;" />
 
+**VGG-16**
+
 
 
 
