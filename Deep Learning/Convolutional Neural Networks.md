@@ -379,7 +379,9 @@ Inception网络框架中会有额外的两个softmadx预测层，这两个预测
 
 <img src="../img/DL/FCObjectDetection.png" alt="FCObjectDetection" style="zoom:80%;" />
 
+假设对象检测算法输入一个14×14×3的图像，图像很小，不过演示起来方便。在这里过滤器大小为5×5，数量是16，14×14×3的图像在过滤器处理之后映射为10×10×16。然后通过参数为2×2的最大池化操作，图像减小到5×5×16。然后添加一个连接400个单元的全连接层，接着再添加一个全连接层，最后通过**softmax**单元输出$y$。为了跟下图区分开，我先做一点改动，用4个数字来表示$y$，它们分别对应**softmax**单元所输出的4个分类出现的概率。这4个分类可以是行人、汽车、摩托车和背景或其它对象。
 
+<img src="../img/DL/ConvObjectDetection.png" alt="ConvObjectDetection" style="zoom:80%;" />
 
 
 
