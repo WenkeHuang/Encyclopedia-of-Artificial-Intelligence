@@ -273,6 +273,8 @@ $$
 $$
 x_{l+1} =h(x_l) + \mathcal{F}(x_l,w_l)
 $$
+其中 ![[公式]](https://www.zhihu.com/equation?tex=h%28x_l%29+%3D+W%27_lx) 。其中 ![[公式]](https://www.zhihu.com/equation?tex=W%27_l) 是 ![[公式]](https://www.zhihu.com/equation?tex=1%5Ctimes1) 卷积操作，但是实验结果 ![[公式]](https://www.zhihu.com/equation?tex=1%5Ctimes1) 卷积对模型性能提升有限，所以一般是在升维或者降维时才会使用。
+
 
 
 
