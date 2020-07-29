@@ -196,7 +196,7 @@ Convolution、Pooling、Fully connected
 
 传统卷积结构：
 
-<img src="../img/DL/LinearConvolutionLayer.PNG" alt="LinearConvolutionLayer" style="zoom:80%;" />
+<img src="../img/DL/LinearConvolutionLayer.PNG" alt="LinearConvolutionLayer" style="zoom:50%;" />
 
 使用relu的一个非线性变换操作为：
 $$
@@ -205,6 +205,8 @@ $$
 i,j表示像素下标，xi,j表示像素值，wk表示卷积参数，k就是下标的索引。
 
 MLP卷积层结构如下图：
+
+<img src="../img/DL/MLP.png" alt="MLP" style="zoom:50%;" />
 
 
 
