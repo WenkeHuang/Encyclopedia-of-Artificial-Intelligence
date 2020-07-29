@@ -461,11 +461,17 @@ $$
 
 ## 人脸识别和人脸验证
 
+人脸验证（**face verification**）和人脸识别（**face recognition**）
 
+**Verfication:**
 
+- Input image, name/ID
+- Output whether the input image is that of the claimed person
 
+**Recognition**
 
-
+- Has a database of K person
+- Get 
 
 
 
