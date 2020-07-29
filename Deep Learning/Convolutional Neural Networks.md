@@ -196,6 +196,8 @@ Convolution、Pooling、Fully connected
 
 传统卷积结构：
 
+<img src="../img/DL/LinearConvolutionLayer.PNG" alt="LinearConvolutionLayer" style="zoom:80%;" />
+
 
 
 
