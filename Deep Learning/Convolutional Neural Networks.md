@@ -142,6 +142,8 @@ Convolution、Pooling、Fully connected
 
 <img src="../img/DL/Parametersharing.png" alt="Parametersharing" style="zoom:75%;" />
 
+第二个方法是使用稀疏连接，我来解释下。这个0是通过3×3的卷积计算得到的，它只依赖于这个3×3的输入的单元格，右边这个输出单元（元素0）仅与36个输入特征中9个相连接。而且其它像素值都不会对输出产生任影响，这就是稀疏连接的概念。
+
 
 
 
