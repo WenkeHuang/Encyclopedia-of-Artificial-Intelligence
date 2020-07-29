@@ -261,7 +261,7 @@ i,j表示像素下标，xi,j表示像素值，wk,n表示第n层卷积卷积参�
 $$
 x_{l+1} = x_l + \mathcal{F}(x_l,w_l)
 $$
-
+![resnet1].
 
 
 
