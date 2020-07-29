@@ -508,6 +508,10 @@ $$
 
 <img src="../img/DL/Siamesenetwork1.png" alt="Siamesenetwork1" style="zoom:80%;" />
 
+向量（编号1）是由网络深层的全连接层计算出来的，叫做$f(x^{(1)})$。可以把$f(x^{(1)})$
+$$
+f(x^{(1)})
+$$
 
 
 
