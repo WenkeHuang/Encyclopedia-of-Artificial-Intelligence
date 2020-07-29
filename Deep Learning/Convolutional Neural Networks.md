@@ -455,7 +455,7 @@ $$
 
 而**anchor box**的思路是，这样子，预先定义两个不同形状的**anchor box**，或者**anchor box**形状，你要做的是把预测结果和这两个**anchor box**关联起来。一般来说，你可能会用更多的**anchor box**，可能要5个甚至更多，但我们就用两个**anchor box**，这样介绍起来简单一些。
 
-
+<img src="../img/DL/anchorbox3.png" alt="anchorbox3" style="zoom:80%;" />
 
 
 
