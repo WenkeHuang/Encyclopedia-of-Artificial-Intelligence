@@ -194,6 +194,8 @@ Convolution、Pooling、Fully connected
 
 <img src="../img/DL/NiNi.svg" alt="NiNi" style="zoom:80%;" />
 
+传统卷积结构：
+
 
 
 
