@@ -377,7 +377,7 @@ Inception网络框架中会有额外的两个softmadx预测层，这两个预测
 
 ## 滑动窗口的卷积实现
 
-
+<img src="../img/DL/FCObjectDetection.png" alt="FCObjectDetection" style="zoom:80%;" />
 
 
 
