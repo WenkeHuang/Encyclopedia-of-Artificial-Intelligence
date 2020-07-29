@@ -504,9 +504,9 @@ $$
 
 ## Siamese 网络
 
+函数$d$的作用就是输入两张人脸，然后告诉你它们的相似度。实现这个功能的一个方式就是用**Siamese**网络，我们看一下
 
-
-
+<img src="../img/DL/Siamesenetwork1.png" alt="Siamesenetwork1" style="zoom:80%;" />
 
 
 
