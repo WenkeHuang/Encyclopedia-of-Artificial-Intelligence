@@ -1,3 +1,5 @@
+
+
 # 卷积神经网络基础
 
 ## 计算机视觉介绍
@@ -261,8 +263,16 @@ i,j表示像素下标，xi,j表示像素值，wk,n表示第n层卷积卷积参�
 $$
 x_{l+1} = x_l + \mathcal{F}(x_l,w_l)
 $$
+残差块分成两部分直接映射部分和残差部分。 ![[公式]](https://www.zhihu.com/equation?tex=h%28x_l%29) 是直接映射，反应在图中是左边的曲线； ![[公式]](https://www.zhihu.com/equation?tex=%5Cmathcal%7BF%7D%28x_l%2C+%7BW_l%7D%29) 是残差部分，一般由两个或者三个卷积操作构成，即图中右侧包含卷积的部分。
+
 <img src="../img/DL/resnet1.jpg" alt="resnet1" style="zoom:80%;" />
 
+图中的Weight在卷积网络中是指卷积操作，addition是指单位加操作。
+
+在卷积网络中， ![[公式]](https://www.zhihu.com/equation?tex=x_l) 可能和 ![[公式]](https://www.zhihu.com/equation?tex=x_%7Bl%2B1%7D) 的Feature Map的数量不一样，这时候就需要使用 ![[公式]](https://www.zhihu.com/equation?tex=1%5Ctimes1) 卷积进行升维或者降维。这时，残差块表示为：
+$$
+x_{l+1} =h(x_l) + \mathcal{F}(x_l,w_l)
+$$
 
 
 
