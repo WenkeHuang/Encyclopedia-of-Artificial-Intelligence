@@ -471,7 +471,8 @@ $$
 **Recognition**
 
 - Has a database of K person
-- Get 
+- Get an input image
+- 
 
 
 
