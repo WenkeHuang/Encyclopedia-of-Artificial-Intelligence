@@ -208,8 +208,10 @@ MLP卷积层结构如下图：
 
 <img src="../img/DL/MLP.png" alt="MLP" style="zoom:50%;" />
 
+mlpconv层的计算公式为：
+$$
 
-
+$$
 
 
 
