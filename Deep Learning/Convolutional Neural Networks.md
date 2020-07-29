@@ -395,7 +395,9 @@ Inception网络框架中会有额外的两个softmadx预测层，这两个预测
 
 其中一个能得到更精准边界框的算法是**YOLO**算法，**YOLO**(**You only look once**)意思是你只看一次，这是由**Joseph Redmon**，**Santosh Divvala**，**Ross Girshick**和**Ali Farhadi**提出的算法。
 
+## 交并比
 
+如何判断对象检测算法运作良好呢？并交比函数，可以用来评价对象检测算法。
 
 
 
