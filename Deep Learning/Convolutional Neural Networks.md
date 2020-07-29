@@ -154,7 +154,9 @@ Convolution、Pooling、Fully connected
 
 ## 经典网络
 
-**LeNet-5**、**AlexNet**和**VGGNet**
+**LeNet-5**、**AlexNet**和**VGGNet**罗列
+
+**LeNet-5**
 
 
 
