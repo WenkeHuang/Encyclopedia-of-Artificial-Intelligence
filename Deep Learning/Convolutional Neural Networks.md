@@ -442,11 +442,18 @@ y=
    b_x   \\
    b_y \\
    b_h\\
-   
+   b_w \\
+   c_1\\
+   c_2\\
+   c_3
   \end{matrix}
   \right] 
 $$
+可以检测这三个类别，行人、汽车和摩托车，它将无法输出检测结果，所以我必须从两个检测结果中选一个。
 
+<img src="../img/DL/Anchorbox2.png" alt="Anchorbox2" style="zoom:80%;" />
+
+而**anchor box**的思路是，这样子，预先定义两个不同形状的**anchor box**，或者**anchor box**形状，你要做的是把预测结果和这两个**anchor box**关联起来。一般来说，你可能会用更多的**anchor box**，可能要5个甚至更多，但对于这个视频，我们就用两个**anchor box**，这样介绍起来简单一些。
 
 
 
