@@ -459,7 +459,7 @@ $$
 
 # 特殊应用：人脸识别和神经风格转换
 
-## 人脸识别和人脸验证
+## 什么是人脸识别
 
 人脸验证（**face verification**）和人脸识别（**face recognition**）
 
@@ -472,11 +472,9 @@ $$
 
 - Has a database of K person
 - Get an input image
-- 
+- Output ID if the image is any of the K person (or "not recognized")
 
-
-
-
+## One-Shot学习
 
 
 
