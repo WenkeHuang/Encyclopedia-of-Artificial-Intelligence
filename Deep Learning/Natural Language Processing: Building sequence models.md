@@ -233,6 +233,8 @@ Attention 是挑重点，就算文本比较长，也能从中间抓住重点，�
 
 <img src="../img/DL/EncoderDecoderAttention.gif" alt="EncoderDecoderAttention" style="zoom:80%;" />
 
+**但是，Attention 并不一定要在 Encoder-Decoder 框架下使用的，他是可以脱离 Encoder-Decoder 框架的。**
+
 
 
 
