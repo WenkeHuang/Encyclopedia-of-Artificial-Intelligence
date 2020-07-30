@@ -175,6 +175,8 @@ CBOW(Continuous Bag-of-Words Model)和Skip-gram (Continuous Skip-gram Model)，�
 
 Word2Vec通过“抽样”模式来解决这种高频词问题。它的基本思想如下：**对于我们在训练原始文本中遇到的每一个单词，它们都有一定概率被我们从文本中删掉，而这个被删除的概率与单词的频率有关。**
 
+## 情感分类
+
 
 
 
