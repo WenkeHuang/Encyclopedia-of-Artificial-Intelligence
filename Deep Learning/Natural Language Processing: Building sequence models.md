@@ -96,6 +96,8 @@ $$
 
 # 自然语言处理与词嵌入（Natural Language Processing and Word Embeddings） 
 
+## 词汇表征 Word Representation
+
 
 
 
