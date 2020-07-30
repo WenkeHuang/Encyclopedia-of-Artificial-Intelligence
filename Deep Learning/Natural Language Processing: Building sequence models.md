@@ -185,7 +185,7 @@ Word2Vec通过“抽样”模式来解决这种高频词问题。它的基本思
 
 <img src="../img/DL/biaswordembedding.png" alt="biaswordembedding" style="zoom:80%;" />
 
-
+# 序列模型和注意力机制
 
 
 
