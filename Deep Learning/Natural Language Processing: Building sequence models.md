@@ -87,7 +87,7 @@ GRU是另一种十分主流的RNN衍生物。 RNN和LSTM都是在设计网络结
 $$
 z_t :=sigm(W_{xz}x_t+W_{hz}h_{t-1}),\\
 r_t: =sigm(W_{xr}x_t+W_{hr}h_{t-1}),\\
-\overline{h}_t :=tanh(W_{xh}x_t+r_t)
+\overline{h}_t :=tanh(W_{xh}x_t+r_t\odot)
 $$
 
 
