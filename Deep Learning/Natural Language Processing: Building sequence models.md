@@ -87,9 +87,12 @@ GRU是另一种十分主流的RNN衍生物。 RNN和LSTM都是在设计网络结
 $$
 z_t :=sigm(W_{xz}x_t+W_{hz}h_{t-1}),\\
 r_t: =sigm(W_{xr}x_t+W_{hr}h_{t-1}),\\
-\overline{h}_t :=tanh(W_{xh}x_t+r_t\odot)
+\overline{h}_t :=tanh(W_{xh}x_t+r_t\odot(W_{hh}h_{t-1})),\\
+h_t:=(1-z_t)\odot \overline{h}_t+z_t\odot h_{t-1}
 $$
 
+- **重置门** ![[公式]](https://www.zhihu.com/equation?tex=r_t) ： ![[公式]](https://www.zhihu.com/equation?tex=r_t) 用于控制前一时刻隐层单元 ![[公式]](https://www.zhihu.com/equation?tex=%5Cboldsymbol+h_%7Bt-1%7D) 对当前词 ![[公式]](https://www.zhihu.com/equation?tex=%5Cboldsymbol+x_t) 的影响。如果 ![[公式]](https://www.zhihu.com/equation?tex=%5Cboldsymbol+h_%7Bt-1%7D) 对 ![[公式]](https://www.zhihu.com/equation?tex=%5Cboldsymbol+x_t) 不重要， 即从当前词 ![[公式]](https://www.zhihu.com/equation?tex=%5Cboldsymbol+x_t) 开始表述了新的意思，与上文无关。那么开关 ![[公式]](https://www.zhihu.com/equation?tex=r_t) 可以打开，使得 ![[公式]](https://www.zhihu.com/equation?tex=%5Cboldsymbol+h_%7Bt-1%7D) 对 ![[公式]](https://www.zhihu.com/equation?tex=%5Cboldsymbol+x_t) 不产生影响。
+- **更新门** ![[公式]](https://www.zhihu.com/equation?tex=z_t) ： ![[公式]](https://www.zhihu.com/equation?tex=z_t) 用于决定是否忽略当前词 ![[公式]](https://www.zhihu.com/equation?tex=%5Cboldsymbol+x_t) 。类似于LSTM中的输入门 ![[公式]](https://www.zhihu.com/equation?tex=i_t) ， ![[公式]](https://www.zhihu.com/equation?tex=z_t) 可以判断当前词 ![[公式]](https://www.zhihu.com/equation?tex=%5Cboldsymbol+x_t) 对整体意思的表达是否重要。当 ![[公式]](https://www.zhihu.com/equation?tex=z_t) 开关接通下面的支路时，我们将忽略当前词 ![[公式]](https://www.zhihu.com/equation?tex=%5Cboldsymbol+x_t) ，同时构成了从 ![[公式]](https://www.zhihu.com/equation?tex=%5Cboldsymbol+h_%7Bt-1%7D) 到 ![[公式]](https://www.zhihu.com/equation?tex=%5Cboldsymbol+h_t) 的短路连接，这使得梯度得已有效地反向传播。和LSTM相同，这种短路机制有效地缓解了梯度消失现象，这个机制于highway networks十分相似。
 
 
 
