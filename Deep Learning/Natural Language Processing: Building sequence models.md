@@ -183,7 +183,7 @@ Word2Vec通过“抽样”模式来解决这种高频词问题。它的基本思
 
 现在机器学习和人工智能算法正渐渐地被信任用以辅助或是制定极其重要的决策，因此我们想尽可能地确保它们不受非预期形式偏见影响，比如说性别歧视、种族歧视等等。
 
-
+<img src="../img/DL/biaswordembedding.png" alt="biaswordembedding" style="zoom:80%;" />
 
 
 
