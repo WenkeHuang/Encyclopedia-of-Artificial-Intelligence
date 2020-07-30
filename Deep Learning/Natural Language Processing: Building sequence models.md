@@ -22,10 +22,15 @@ U是输入层到隐藏层的**权重矩阵**，o也是一个向量，它表示**
 
 如果我们把上面的图展开，**循环神经网络**也可以画成下面这个样子：
 
+<img src="../img/DL/RNNstructuretime.jpg" alt="RNNstructuretime" style="zoom:80%;" />
 
+现在看上去就比较清楚了，这个网络在t时刻接收到输入 ![[公式]](https://www.zhihu.com/equation?tex=x_%7Bt%7D) 之后，隐藏层的值是 ![[公式]](https://www.zhihu.com/equation?tex=s_%7Bt%7D) ，输出值是 ![[公式]](https://www.zhihu.com/equation?tex=o_%7Bt%7D) 。关键一点是， ![[公式]](https://www.zhihu.com/equation?tex=s_%7Bt%7D) 的值不仅仅取决于 ![[公式]](https://www.zhihu.com/equation?tex=x_%7Bt%7D) ，还取决于 ![[公式]](https://www.zhihu.com/equation?tex=s_%7Bt-1%7D) 。我们可以用下面的公式来表示**循环神经网络**的计算方法：
 
-
-
+用公式表示如下
+$$
+O_t = g(V\cdot S_t)\\
+S_t = f(U \cdot X_t + W \cdot S_{t-1})
+$$
 
 
 
