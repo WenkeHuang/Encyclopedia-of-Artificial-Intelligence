@@ -136,6 +136,10 @@ $$
 
 CBOW(Continuous Bag-of-Words Model)和Skip-gram (Continuous Skip-gram Model)，是Word2vec 的两种训练模式。下面简单做一下解释：
 
+**CBOW**
+
+通过上下文来预测当前值。相当于一句话中扣掉一个词，让你猜这个词是什么
+
 
 
 
