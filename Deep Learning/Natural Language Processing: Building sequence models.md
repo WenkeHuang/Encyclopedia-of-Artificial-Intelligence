@@ -219,7 +219,7 @@ Attention三大优点：
 
 **参数少**
 
-模型复杂度跟 [CNN](https://easyai.tech/ai-definition/cnn/)、[RNN](https://easyai.tech/ai-definition/rnn/) 相比，复杂度更小，参数也更少。所以对算力的要求也就更小。
+模型复杂度跟 CNN、RNN 相比，复杂度更小，参数也更少。所以对算E n力的要求也就更小。
 
 **速度快**
 
@@ -231,11 +231,7 @@ Attention 解决了 RNN 不能并行计算的问题。Attention机制每一步�
 
 Attention 是挑重点，就算文本比较长，也能从中间抓住重点，不丢失重要的信息。
 
-
-$$
-x^{<1>}
-$$
-
+<img src="../img/DL/EncoderDecoderAttention.gif" alt="EncoderDecoderAttention" style="zoom:80%;" />
 
 
 
