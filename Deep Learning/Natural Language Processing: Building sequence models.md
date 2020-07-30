@@ -1,5 +1,7 @@
 # 循环序列模型（Recurrent Neural Networks）
 
+## 为什么选择序列模型
+
 
 
 
