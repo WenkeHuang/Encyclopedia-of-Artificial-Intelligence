@@ -31,7 +31,7 @@ $$
 O_t = g(V\cdot S_t)\\
 S_t = f(U \cdot X_t + W \cdot S_{t-1})
 $$
-
+## RNN 梯度消失
 
 
 
