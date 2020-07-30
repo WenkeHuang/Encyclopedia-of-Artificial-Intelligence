@@ -85,7 +85,9 @@ RNN产生梯度消失与梯度爆炸的原因就在于 ![[公式]](https://www.z
 
 GRU是另一种十分主流的RNN衍生物。 RNN和LSTM都是在设计网络结构用于缓解梯度消失问题，只不过是网络结构有所不同。GRU在数学上的形式化表示如下：
 $$
-
+z_t :=sigm(W_{xz}x_t+W_{hz}h_{t-1}),\\
+r_t: =sigm(W_{xr}x_t+W_{hr}h_{t-1}),\\
+\overline{h}_t :=tanh(W_{xh}x_t+r_t)
 $$
 
 
