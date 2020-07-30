@@ -31,11 +31,14 @@ $$
 O_t = g(V\cdot S_t)\\
 S_t = f(U \cdot X_t + W \cdot S_{t-1})
 $$
+
 ## RNN 梯度消失
 
+无论是梯度消失还是梯度爆炸，都是**源于网络结构太深**，造成网络权重不稳定，从本质上来讲是**因为梯度反向传播中的连乘效应。**
 
+我们给定一个三个时间的RNN单元，如下：
 
-
+<img src="../img/DL/RNNgradient.jpg" alt="RNNgradient" style="zoom:80%;" />
 
 
 
