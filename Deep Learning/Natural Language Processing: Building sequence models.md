@@ -160,7 +160,18 @@ CBOW(Continuous Bag-of-Words Model)和Skip-gram (Continuous Skip-gram Model)，�
 1. 由于词和向量是一对一的关系，所以多义词的问题无法解决。
 2. Word2vec 是一种静态的方式，虽然通用性强，但是无法针对特定任务做动态优化
 
+## 负采样
 
+针对skip-gram以及CBOW的算法训练，当面对百万级的文本，就算是隐藏层是检索功能，其计算量也是相当大，而且还会造成冗余计算，这时候**对高频词抽样以及负采样**就应运而生了。
+
+举例，原始文本为“The quick brown fox jumps over the laze dog”，如果我使用大小为2的窗口，那么我们可以得到图中展示的那些训练样本。
+
+<img src="../img/DL/negativesampling.jpg" alt="negativesampling" style="zoom:80%;" />
+
+但是对于“the”这种常用高频单词，这样的处理方式会存在下面两个问题：
+
+1. 当我们得到成对的单词训练样本时，("fox", "the") 这样的训练样本并不会给我们提供关于“fox”更多的语义信息，因为“the”在每个单词的上下文中几乎都会出现。
+2. 由于在文本中“the”这样的常用词出现概率很大，因此我们将会有大量的（”the“，...）这样的训练样本，而这些样本数量远远超过了我们学习“the”这个词向量所需的训练样本数。
 
 
 
