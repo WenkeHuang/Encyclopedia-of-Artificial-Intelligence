@@ -10,11 +10,14 @@
 
 当输入是416x416时，特征结构如下：
 
+<img src="../../img/Paper/ObjectDetection/YOLOv4_Backbone_416.png" alt="YOLOv4_Backbone_416" style="zoom:80%;" />
 
+当输入是608x608时，特征结构如下：
 
+<img src="../../img/Paper/ObjectDetection/YOLOv4_Backbone_608.png" alt="YOLOv4_Backbone_608" style="zoom:80%;" />
 
-
-
+而在YoloV4-Tiny中，其使用了CSPdarknet53_tiny作为主干特征提取网络。
+和CSPdarknet53相比，**为了更快速，将激活函数重新修改为LeakyReLU**。
 
 
 
