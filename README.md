@@ -34,7 +34,7 @@ I have the Artificial Intelligence knowledge you want.
 - CS520 Knowledge Graphs Stanford University
 - Deep Learning and Machine Learning Hung-yi Lee
 ## Personal Information
-Major：Software engineering & finance    
+Major：Software engineering & Finance    
 Research Areas：Full Stack development & Computer Vision & Econometrics    
 [CSDN Blog](https://blog.csdn.net/qq_41409438) 
 ## Seize the day, boys. Make your lives extraordinary.
