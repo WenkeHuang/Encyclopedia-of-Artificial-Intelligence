@@ -3,7 +3,7 @@ I have the Artificial Intelligence knowledge you want.
 
 Better readning experimence:
 
-[Mathjax plugin for github ](https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima) 
+​	[Mathjax plugin for github ](https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima) 
 
 [Typora]( https://typora.io/)
 
