@@ -1,14 +1,13 @@
 # Encyclopedia-of-Artificial-Intelligence
-I have the Artificial Intelligence knowledge you want. 	 
-## Machine Learning
+I have the Artificial Intelligence knowledge you want. 
 
-Better readning experimence ==> 
+Better readning experimence:
 
 [Mathjax plugin for github ](https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima) 
 
-[Typora](https://typora.io/)
+[Typora]( https://typora.io/)
 
- 
+## Machine Learning
 
 [1.统计学习方法概论](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Machine%20Learning/1.%20%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E6%A6%82%E8%AE%BA.md)  
 [2.感知器](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Machine%20Learning/2.%20%E6%84%9F%E7%9F%A5%E5%99%A8.md)    
