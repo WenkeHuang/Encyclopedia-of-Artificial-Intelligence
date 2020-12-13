@@ -6,6 +6,8 @@ $$
 $$
 w_{t+1} = w_{t} - \eta\hat{\nabla}_{w}{L(w_{t})}
 $$
+
+
 **Mnist batch stochastic gradient descent**
 $$
 \theta_{t+1} = \theta_i -\alpha \frac{1}{m} \cdot \sum_{i=x}^{i=x+m-1}\nabla_{\theta} J_i(\theta,x^i,y^i)
