@@ -1,7 +1,7 @@
 # Encyclopedia-of-Artificial-Intelligence
 I have the Artificial Intelligence knowledge you want. 
 
-Better readning experimence:
+Better reading experience:
 
 [Mathjax plugin for github ](https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima) 
 
@@ -47,5 +47,3 @@ Better readning experimence:
 Major：Software engineering & Finance    
 Research Areas：Full Stack development & Computer Vision & Econometrics    
 [CSDN Blog](https://blog.csdn.net/qq_41409438) 
-
-## Seize the day, boys. Make your lives extraordinary.
