@@ -46,13 +46,73 @@ $$
 P\{ X_1=k_1,X_2=k_2,..,X_n=k_n\}=\frac{n!}{k_1! k_2!...k_n!}\prod_{i=1}^np_i^{k_i} where \sum{i=0}^n k_i=n
 $$
 
+## Gamma 函数
+
+为什么需要伽玛功能？ -- 因为我们要泛化阶乘！
+
+
+$$
+\Gamma(x)=\int_0^{\infty}t^{x-1}e^{-t}dt
+$$
+通过分部积分的方法，可以推导出这个函数有如下的递归性质
+$$
+\Gamma(x+1) = x \Gamma(x)
+$$
+ 于是很容易证明，$\Gamma(x)$函数可以当成是阶乘在实数集上的延拓，具有如下性质
+$$
+\Gamma(n) = (n-1)!
+$$
+1728 年，哥德巴赫在考虑数列插值的问题，通俗的说就是把数列的通项公式定义从整数集合延拓到实数集合，例如数列 $1,4,9,16,\cdots$ 可以用通项公式 $n^2$ 自然的表达，即便 $n$ 为实数的时候，这个通项公式也是良好定义的。直观的说也就是可以找到一条平滑的曲线 $y=x^2$ 通过所有的整数点 $(n,n^2)$从而可以把定义在整数集上的公式延拓到实数集合。
+
+一天哥德巴赫开始处理阶乘序列$1,2,6,24,120,720,\cdots$， 我们可以计算 
+
+$2!,3!$，是否可以计算$2.5!$呢？我们把最初的一些 $(n,n!)$的点画在坐标轴上，确实可以看到，容易画出一条通过这些点的平滑曲线。
+
+但是哥德巴赫无法解决阶乘往实数集上延拓的这个问题，于是写信请教尼古拉斯. 贝努利和他的弟弟丹尼尔. 贝努利，由于欧拉当时和丹尼尔. 贝努利在一块，他也因此得知了这个问题。而欧拉于 1729 年完美的解决了这个问题，由此导致了$\Gamma$ 函数的诞生，当时欧拉只有 22 岁。
+
+事实上首先解决$n!$ 的插值计算问题的是丹尼尔. 贝努利，他发现，
+
+如果 $m,n$都是正整数，如果 $m \rightarrow \infty$，有
+$$
+\frac{1\cdot 2\cdot 3 \cdots m}{(1+n)(2+n)\cdots (m-1+n)}(m+\frac{n}{2})^{n-1} \rightarrow n!
+$$
+其次：
+$$
+\begin{equation}
+\label{euler-series}
+\Bigl[\Bigl(\frac{2}{1}\Bigr)^n\frac{1}{n+1}\Bigr]
+\Bigl[\Bigl(\frac{3}{2}\Bigr)^n\frac{2}{n+2}\Bigr]
+\Bigl[\Bigl(\frac{4}{3}\Bigr)^n\frac{3}{n+3}\Bigr] \cdots = n!
+\quad (*)
+\end{equation}
+$$
+
+
+The  definition of gamma function is:
+$$
+\Gamma(x) = \int_{0}^{\infty} {s^{x-1} e^{-s} ds}
+$$
+And:
+$$
+\begin{align}
+\Gamma(x+1) = x\Gamma(x)
+\end{align}
+$$
+Proof:
+$$
+\begin{align*}
+\Gamma(x+1) &= \int_{0}^{\infty} {s^{x} e^{-s} ds} \\
+&= \big[s^{x} (-e^{-s})\big] \big|_{0}^{\infty} - \int_{0}^{\infty} {(x s^{x-1}) (-e^{-s}) ds} \\
+&= (0 - 0) + x \int_{0}^{\infty} {s^{x-1} e^{-s} ds} \\
+&= x \Gamma(x)
+\end{align*}
+$$
+
 ## $\beta$分布
 
 - 通俗的讲，**先验概率**就是事情尚未发生前，我们对该事发生概率的估计。利用过去历史资料计算得到的先验概率，称为**客观先验概率**； 当历史资料无从取得或资料不完全时，凭人们的主观经验来判断而得到的先验概率，称为**主观先验概率**。例如抛一枚硬币头向上的概率为0.5，这就是主观先验概率。
 
 - **后验概率**是指通过调查或其它方式获取新的附加信息，利用贝叶斯公式对先验概率进行修正，而后得到的概率。
-
-
 
 $Beta(\alpha,\beta)$
 
@@ -127,3 +187,4 @@ https://www.zhihu.com/question/26751755
 
 https://leimao.github.io/blog/Introduction-to-Dirichlet-Distribution/
 
+https://cosx.org/2013/01/lda-math-gamma-function/
