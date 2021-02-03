@@ -137,14 +137,14 @@ Lenet-5 for $Teacher $ model; 61706 parameters
 
 Lenet-5-Half for $Student$ model; 35820 parameters
 
-|                       Model                        | Performance | Explanation                                                  |
-| :------------------------------------------------: | :---------: | ------------------------------------------------------------ |
-|                     Teacher-CE                     |    99.34    | The classification accuracy of the Teacher model trained using the cross-entropy (CE) loss |
-|                     Student-CE                     |    98.92    | The performance of the Student model trained with all the training samples and their ground truth labels using cross-entropy loss |
-| Student-KD (Hinton et al., 2015) 60K original data |    99.25    | The accuracy of the Student model trained using the actual training samples through Knowledge Distillation (KD) from Teacher. |
-|      (Kimura et al., 2018) 200 original data       |    86.70    |                                                              |
-|       (Lopes et al., 2017) (uses meta data)        |    92.47    |                                                              |
-|    ZSKD (Ours)(24000 DIs, and no original data)    |  **98.77**  | Outperform the existing few data (Kimura et al., 2018) and data-free counterparts (Lopes et al., 2017) by a great margin. It performs close to the full data (classical) Knowledge Distillation while using only 24000 DIs, i.e., 40% of the the original training set size. |
+| Model                                              | Performance | Explanation                                                  |
+| -------------------------------------------------- | ----------- | ------------------------------------------------------------ |
+| Teacher-CE                                         | 99.34       | The classification accuracy of the Teacher model trained using the cross-entropy (CE) loss |
+| Student-CE                                         | 98.92       | The performance of the Student model trained with all the training samples and their ground truth labels using cross-entropy loss |
+| Student-KD (Hinton et al., 2015) 60K original data | 99.25       | The accuracy of the Student model trained using the actual training samples through Knowledge Distillation (KD) from Teacher. |
+| (Kimura et al., 2018) 200 original data            | 86.70       |                                                              |
+| (Lopes et al., 2017) (uses meta data)              | 92.47       |                                                              |
+| ZSKD (Ours)(24000 DIs, and no original data)       | **98.77**   | Outperform the existing few data (Kimura et al., 2018) and data-free counterparts (Lopes et al., 2017) by a great margin. It performs close to the full data (classical) Knowledge Distillation while using only 24000 DIs, i.e., 40% of the the original training set size. |
 
 #### Fashion MNIST
 
@@ -152,13 +152,13 @@ Lenet-5 for $Teacher $ model; 61706 parameters
 
 Lenet-5-Half for $Student$ model; 35820 parameters
 
-|                       Model                        | Performance |
-| :------------------------------------------------: | :---------: |
-|                     Teacher-CE                     |    90.84    |
-|                     Student-CE                     |    89.43    |
-| Student-KD (Hinton et al., 2015) 60K original data |    89.66    |
-|      (Kimura et al., 2018) 200 original data       |    72.50    |
-|       ZSKD (48000 DIs, and no original data)       |    79.62    |
+| Model                                              | Performance |
+| -------------------------------------------------- | ----------- |
+| Teacher-CE                                         | 90.84       |
+| Student-CE                                         | 89.43       |
+| Student-KD (Hinton et al., 2015) 60K original data | 89.66       |
+| (Kimura et al., 2018) 200 original data            | 72.50       |
+| ZSKD (48000 DIs, and no original data)             | 79.62       |
 
 #### CIFAR-10
 
@@ -168,7 +168,7 @@ AlexNet as $Teacher$ model;
 
 ### Size of the Transfer Set
 
-Different number of Data Impressions such as ${1\%, 5\%, 10\%, . . . , 80\%}$ of the training set size.
+Different number of Data Impressions such as 1%, 5%, 10%, . . . , 80% of the training set size.
 
 随着数据集变得复杂，需要生成更多的数据印象来捕获数据集中的底层模式。注意，在蒸馏过程中也观察到与实际训练样本类似的趋势。
 
