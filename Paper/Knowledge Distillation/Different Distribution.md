@@ -154,8 +154,13 @@ $$
 \Gamma(x) = \int_0^{+\infty}t^{x-1}e^{-t}dt
 $$
 
+二项分布与Beta分布是**共轭先验**的。即Beta分布乘上一个二项分布的似然函数后，得到的后验分布仍然是一个Beta分布。
 
 ### 狄利克雷分布
+
+二项分布的分布是Beta分布，而二项分布的推广形式多项分布的分布就是Dirichlet分布。
+
+Dirichlet分布与多项分布是共轭先验的。即Dirichlet分布乘上一个多项分布的似然函数后，得到的后验分布仍然是一个Dirichlet分布。
 
 狄利克雷分布是一种“分布的分布” (a distribution on probability distribution) ，由两个参数$\alpha$，$G_0$确定，即$G\sim DP(\alpha，G_0)$， $\alpha$是分布参数(concentration or scaling parameter)，**其值越大，分布越接近于均匀分布**，其值越小，分布越concentrated。$G_0$是基分布(base distribution)。
 
@@ -177,6 +182,17 @@ $$
 
 然而，最希望的还是用一种**以统计学为主，尽量避免主管因素**（比如人为规定类别数量，人为进行剪枝）的方法来对数据进行聚类。
 
+对Dirichlet分布我们有如下写法：
+$$
+\Theta = \{\theta_1,...,\theta_m\}
+$$
+
+$$
+P(\theta_1,...,\theta_m)=\frac{\Gamma(\sum_k \alpha_k)}{\prod_k\Gamma(\alpha_k)}\prod_{k=1}^m \theta_k^{\alpha_k-1}
+$$
+
+根据维基百科的定义，Dirichlet分布是一组连续的多元概率分布，其参数是一个正直向量$\alpha$。Dirichlet分布常常用在贝叶斯分布中作为先验分布存在。Dirichlet分布的无限维扩展就是Dirichlet过程。
+
 
 
 https://www.zhihu.com/question/26751755
@@ -186,3 +202,8 @@ https://www.zhihu.com/question/26751755
 https://leimao.github.io/blog/Introduction-to-Dirichlet-Distribution/
 
 https://cosx.org/2013/01/lda-math-gamma-function/
+
+https://xijunlee.github.io/2017/09/09/Dirichlet%E5%88%86%E5%B8%83%E4%B8%8EBeta%E5%88%86%E5%B8%83/
+
+https://www.datalearner.com/blog/1051459673766843
+
