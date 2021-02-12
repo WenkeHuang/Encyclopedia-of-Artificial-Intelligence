@@ -98,7 +98,7 @@ $$
 
 探索不同类别的网络间的BAN（ResNets teacher，DenseNets student；DenseNets student，ResNets teacher）
 
-![BAN_Figure](BAN_Figure.PNG)
+![BAN_Figure](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Paper/Knowledge%20Distillation/Born-Again%20Neural%20Netowrk%20(2018)/BAN_Figure.png)
 
 从Table 2左侧表的右边两行可以看出，尽管CWTM,DKPP没有 dark knowledge 的参与，但是这两种模型仍然稳定的提升了模型的泛化能力,这说明KD的提升不仅仅来自于非目标类别的信息.DKPP的结果说明，尽管打乱了所有非最大值的排序（丢失了非目标类别的信息），但只靠最大类别的概率仍然可以稳定地提升模型的泛化能力CWTM完全去掉了非目标类别的信息，但仍然可以提升模型的效果，表明KD有效的原因还可以部分归咎于他对目标类别的损失有重要性加权的意思（teacher集中于max则权重大，否则权重小.
 
