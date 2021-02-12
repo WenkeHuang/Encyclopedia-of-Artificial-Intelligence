@@ -130,7 +130,7 @@ $$
 |  Hinton-784-800-800-10  |              All-Layers Spectral              |        89.41         |
 |  Hinton-784-800-800-10  |             Layer-Pairs Spectral              |        91.24         |
 
-![img_1](./img_1.PNG)
+![img_1](./img_1.png)
 
 |    Model     |   Activation Record    | Accuracy on test set |
 | :----------: | :--------------------: | :------------------: |
@@ -142,7 +142,7 @@ $$
 | LeNet-5-half |  All-Layers Spectral   |        90.28         |
 | LeNet-5-half |  Layer-Pairs Spectral  |        92.47         |
 
-![img_2](./img_2.PNG)
+![img_2](./img_2.png)
 
 
 
@@ -161,3 +161,4 @@ https://raphagl.com/research/replayed-distillation/
 
 https://github.com/irapha/replayed_distillation
 
+https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Paper/Knowledge%20Distillation/Data-Free%20Knowledge%20Distillation%20for%20Deep%20Neural%20Networks%20(2017)/img_2.png
