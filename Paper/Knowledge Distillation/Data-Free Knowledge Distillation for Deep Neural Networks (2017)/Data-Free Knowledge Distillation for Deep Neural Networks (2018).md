@@ -160,5 +160,3 @@ $$
 https://raphagl.com/research/replayed-distillation/
 
 https://github.com/irapha/replayed_distillation
-
-https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Paper/Knowledge%20Distillation/Data-Free%20Knowledge%20Distillation%20for%20Deep%20Neural%20Networks%20(2017)/img_2.png
