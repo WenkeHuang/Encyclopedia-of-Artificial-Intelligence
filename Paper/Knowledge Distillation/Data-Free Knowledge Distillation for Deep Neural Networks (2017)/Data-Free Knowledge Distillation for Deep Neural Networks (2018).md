@@ -130,7 +130,7 @@ $$
 |  Hinton-784-800-800-10  |              All-Layers Spectral              |        89.41         |
 |  Hinton-784-800-800-10  |             Layer-Pairs Spectral              |        91.24         |
 
-![img_1](img_1.PNG)
+![img_1](./img_1.PNG)
 
 |    Model     |   Activation Record    | Accuracy on test set |
 | :----------: | :--------------------: | :------------------: |
@@ -142,7 +142,7 @@ $$
 | LeNet-5-half |  All-Layers Spectral   |        90.28         |
 | LeNet-5-half |  Layer-Pairs Spectral  |        92.47         |
 
-![img_2](img_2.PNG)
+![img_2](./img_2.PNG)
 
 
 
