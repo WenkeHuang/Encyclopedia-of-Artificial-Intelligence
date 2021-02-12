@@ -105,7 +105,7 @@ $$
 
 我们选择的目标模型是7层全连接神经网络，其中每个中间层具有1000个单位。 我们使用Nadam 进行模型参数优化，使用Adam 进行伪示例优化，它们的初始学习率分别设置为0.001和0.05。 批次大小为100，训练时期为200。
 
-![Experiment_1](Experiment_1.PNG)
+![Experiment_1](./Experiment_1.png)
 
 orange & blue crosses = supervised examples （有监督样本）
 
