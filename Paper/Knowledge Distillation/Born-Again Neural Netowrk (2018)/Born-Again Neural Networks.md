@@ -21,7 +21,7 @@ $$
 
 ## Idea
 
-![BAN_structure](BAN_structure.PNG)
+![BAN_structure](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Paper/Knowledge%20Distillation/Born-Again%20Neural%20Netowrk%20(2018)/BAN_structure.png)
 
 图 ：BAN 训练过程的图形表示：第一步，从标签 Y 训练教师模型 T。然后，在每个连续的步骤中，**从不同的随机种子初始化有相同架构的新模型**，并且在**前一学生模型**的监督下训练这些模型。在该过程结束时，通过多代学生模型的集成可获得额外的性能提升。
 
