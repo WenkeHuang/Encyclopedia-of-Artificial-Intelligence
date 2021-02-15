@@ -52,6 +52,12 @@ $$
 
 - Positional Encoding(位置嵌入向量——其实类似word2vec，只不过处理的是位置信息罢了)
 
+截止目前为止，我们介绍的Transformer模型并没有捕捉顺序序列的能力，也就是说无论句子的结构怎么打乱，Transformer都会得到类似的结果。换句话说，Transformer只是一个功能更强大的词袋模型而已。
+
+为了解决这个问题，论文中在编码词向量时引入了位置编码（Position Embedding）的特征。具体地说，位置编码会在词向量中加入了单词的位置信息，这样Transformer就能区分不同位置的单词了。
+
+那么怎么编码这个位置信息呢？常见的模式有：a. 根据数据学习；b. 自己设计编码规则。在这里作者采用了第二种方式。那么这个位置编码该是什么样子呢？通常位置编码是一个长度为$d_{model}$的特征向量，这样便于和词向量进行单位加的操作
+
 由于我们的模型不包含循环和卷积，为了让模型利用序列的顺序，我们必须注入序列中关于词符相对或者绝对位置的一些信息。 为此，我们将“位置编码”添加到编码器和解码器堆栈底部的输入嵌入中。 位置编码和嵌入的维度dmodel相同，所以它们俩可以相加。 有多种位置编码可以选择，例如通过学习得到的位置编码和固定的位置编码
 $$
 PE_{(pos,2i)}=sin(pos/1000^{2i/d_{model}})
@@ -99,7 +105,34 @@ Positional Encoding
 
 ## Experiments
 
+### Training Data and Batching
+WMT 2014 English-German dataset
 
+WMT 2014 English-French dataset
+
+Each training batch contained a set of sentence pairs containing approximately 25000 source tokens and 25000 target token.
+
+### Hardware and Schedule
+
+8 NVIDIA P100 GPUs.
+
+### Optimizer
+
+$$
+lrate = d_{model}^{-0.5} \cdot (step_num^{-0.5},step{\_}num \cdot warmup{\_}steps^{-1.5})
+$$
+
+### Regularization
+
+Attention Dropout(Residual Dropout)
+
+Label Smoothing
+
+## 总结
+
+**优点**：（1）虽然Transformer最终也没有逃脱传统学习的套路，Transformer也只是一个全连接（或者是一维卷积）加Attention的结合体。但是其设计已经足够有创新，因为其抛弃了在NLP中最根本的RNN或者CNN并且取得了非常不错的效果，算法的设计非常精彩，值得每个深度学习的相关人员仔细研究和品位。（2）Transformer的设计最大的带来性能提升的关键是将任意两个单词的距离是1，这对解决NLP中棘手的长期依赖问题是非常有效的。（3）Transformer不仅仅可以应用在NLP的机器翻译领域，甚至可以不局限于NLP领域，是非常有科研潜力的一个方向。（4）算法的并行性非常好，符合目前的硬件（主要指GPU）环境。
+
+**缺点**：（1）粗暴的抛弃RNN和CNN虽然非常炫技，但是它也使模型丧失了捕捉局部特征的能力，RNN + CNN + Transformer的结合可能会带来更好的效果。（2）Transformer失去的位置信息其实在NLP中非常重要，而论文中在特征向量中加入Position Embedding也只是一个权宜之计，并没有改变Transformer结构上的固有缺陷
 
 ## Relative Resource
 
