@@ -9,7 +9,7 @@ Two practical scenarios of Federated Semi-Supervised Learning (FSSL):
 - each client learns with only partly labeled data (Labels-at-**Client** scenario) 客户端有数据 用户端同时具备Labeled 和 Unlabeled数据会带来模型对Labeled数据的遗忘
 - supervised labels are only available at the **server** 服务器端有数据
 
-![Problem Definition](./img/ICLR_1.PNG)
+![Problem Definition](./img/ICLR_1.png)
 
 #### Prior Work
 
@@ -142,7 +142,7 @@ HeteroFL 训练异构的本地网络（他们有不同的计算能力）并且�
 
 据我们所知，我们所呈现的是第一项允许本地模型具有与全局模型不同的体系结构的工作。 异构本地模型可以使本地客户适应性地为全局模型的训练做出贡献。 系统的异构性和通信效率可以通过我们的方法很好地解决，本地客户可以优化低计算复杂性模型，从而传达少量模型参数。 为了解决统计上的异质性，我们针对分类问题中的平衡非IID数据分区提出了“掩盖技巧”。 我们还建议对批处理规范化（BN）进行修改（Ioffe和Szegedy，2015年），因为运行估计的隐私问题会阻碍高级深度学习模型的使用。
 
-![Problem Definition](./img/ICLR_2.PNG)
+![Problem Definition](./img/ICLR_2.png)
 
 #### Idea
 
@@ -222,7 +222,7 @@ $W^{p-1,t+1}_g \backslash W_g^{p,t+1}$ 代表属于$W^{p-1,t+1}_g$但不属于 $
 
 #### Comparison with different Mixup
 
-![Different_Mixup](./img/ICLR_3.PNG)
+![Different_Mixup](./img/ICLR_3.png)
 
 #### Mixup
 
