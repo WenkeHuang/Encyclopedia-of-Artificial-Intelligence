@@ -183,3 +183,4 @@ $W^{p-1,t+1}_g \backslash W_g^{p,t+1}$ 代表属于$W^{p-1,t+1}_g$但不属于 $
 
 看求不懂.......甩数学公式是真的酷炫啊..........
 
+### Federated Learning Via Posterior Averaging: A New Perspective And Practical Algorithms
