@@ -181,6 +181,81 @@ $W^{p-1,t+1}_g \backslash W_g^{p,t+1}$ 代表属于$W^{p-1,t+1}_g$但不属于 $
 
 ### FedBN : Federated Learning on Non-IID Features via Local Batch Normalization
 
+目的在于解决feature shift （where local clients store examples with different distributions compared to other clients, which we denote as feature shift non-iid.）
+
+
+
 看求不懂.......甩数学公式是真的酷炫啊..........
 
+
+
 ### Federated Learning Via Posterior Averaging: A New Perspective And Practical Algorithms
+
+目的在于提高收敛&计算速度
+
+本文的主要贡献可以概括如下：
+
+1. 我们通过后验推理的角度介绍了关于联合学习的新观点，该观点拓宽了FL算法的设计空间，超越了单纯的优化技术。
+2. 从这个角度出发，我们设计了一种计算和通信效率高的近似后验推理算法-联合后验平均（FEDPA）。 FEDPA与无状态客户端配合使用，其计算复杂度和内存占用量与FEDAVG相似。
+3. 我们表明，具有许多局部步骤的FEDAVG实际上是FEDPA的一种特殊情况，它可以估计具有身份的局部后方协方差。这些有偏差的估计是不一致更新的根源，并解释了为什么即使在简单的二次设置中，FEDAVG仍具有次优收敛。
+4. 最后，我们将FEDPA与Reddi等人在现实的FL基准上的强基准进行比较。 （2020年），并在多个关注指标方面取得了最先进的成果。Contributions.1
+
+### Achieving Linear Speedup With Partial Worker Participation In Non-IID Federated Learning
+
+### Adaptive Federated Optimization
+
+#### Contribution
+
+- 我们研究了使用服务器和客户端优化器进行联合优化的通用框架。该框架概括了许多现有的联合优化方法，包括FEDAVG。
+
+- 我们使用此框架来设计新颖的，跨设备兼容的自适应联合优化方法，并在一般非凸设置下提供收敛分析。据我们所知，这是使用自适应服务器优化进行FL的第一种方法。我们展示了本地步骤数量与客户之间的异质性之间的重要相互作用。
+- 我们引入了全面且可重现的经验基准，用于比较联合优化方法。这些基准测试包括涉及图像和文本数据的七种多样且具有代表性的FL任务，具有不同数量的异构性和客户数量。
+- 我们展示了自适应优化器在整个过程中的强大经验性能，并在常用基准上进行了改进。我们的结果表明，我们的方法可以更轻松地进行调整，并突出显示它们在跨设备设置中的实用性。
+
+### FEDMIX: Approximation Of Mixup Under Mean Augmented Federated Learning
+
+允许客户之间发送数据，通过近似和增加参与方得到平均的数据结果
+
+#### Problems
+
+在独立且均布的（iid）本地数据的假设下有可喜的结果，但随着客户端之间本地数据异质性的提高，当前最新的算法会遭受性能下降的困扰。为了解决此问题，我们提出了一个简单的框架，即均值增强联合学习（MAFL），在该框架下，客户可以根据目标应用程序的隐私要求发送和接收平均本地数据。在我们的框架下，我们提出了一种名为FedMix的新扩充算法，该算法的灵感来自于一种惊人而又简单的数据扩充方法Mixup，**但它不需要在设备之间直接共享本地原始数据**。与传统算法相比，在高度非联合联合设置下，我们的方法在FL的标准基准数据集中显示出显着改善的性能
+
+#### Comparison with different Mixup
+
+![Different_Mixup](./img/ICLR_3.PNG)
+
+#### Mixup
+
+$$
+\widetilde{x} = \lambda x_i + (1-\lambda)x_j
+$$
+
+$$
+\widetilde{y} = \lambda y_i + (1-\lambda)y_j
+$$
+
+$$
+\lambda \in [0,1]
+$$
+
+#### Idea
+
+In order to mitigate the heterogeneity across clients while protecting privacy, we provide a novel yet simple framework, mean augmented federated learning (MAFL), in which **each client exchanges the updated model parameters as well as its mashed (or averaged) data.**
+
+只能将丢失了大多数歧视性信息的我们框架中的平均数据带走，从而产生与全局混合类似的效果，在这种情况下，客户无需访问即可直接访问其他人的私有数据。（已证明还ok：Taylor expansion of global Mixup only involves the averaged data from other clients.）
+
+**FedMix**的loss函数计算：
+$$
+\mathcal{l}_{FedMix}=\frac{1}{|J|}\sum_{j\in J}(1-\lambda)l(f((1-\lambda)x_i),y_i)+\lambda l(f((1-\lambda)x_i),y_i)+\lambda \frac{\partial l}{\partial x}\cdot  x_j
+$$
+进一步得到：
+$$
+\mathcal{l}_{FedMix}=(1-\lambda)l(f((1-\lambda)x_i),y_i)+\lambda l(f((1-\lambda)x_i),\bar{y}_i)+\lambda \frac{\partial l}{\partial x}\cdot \bar x_j
+$$
+
+### FedBE: Making Bayesian Model Ensemble Applicable To Federated Learning
+
+针对模型整合model aggregation，使用了高斯分布和狄利克雷分布
+
+联合学习旨在通过访问用户的本地训练模型而不是他们自己的数据来协作训练一个强大的全局模型。因此，至关重要的一步是将局部模型聚合为全局模型，这在用户没有i.i.d时显示出挑战。数据。在本文中，我们提出了一种新的聚合算法FEDBE，**它通过对高质量的全局模型进行采样并通过贝叶斯模型Ensemble对其进行组合，从而从贝叶斯推理的角度出发，从而实现了强大的聚合**。我们表明，可以通过简单地**将高斯或Dirichlet分布拟合到局部模型来构建有效的模型分布**。我们的实证研究证实了FEDBE的出色性能，尤其是在没有i.i.d.用户数据的情况下。以及当神经网络更深入时。此外，FEDBE与最近在规范用户模型训练方面所做的努力兼容，使其成为易于应用的模块：您只需要替换聚合方法，而使联邦学习算法的其他部分保持不变。
+
