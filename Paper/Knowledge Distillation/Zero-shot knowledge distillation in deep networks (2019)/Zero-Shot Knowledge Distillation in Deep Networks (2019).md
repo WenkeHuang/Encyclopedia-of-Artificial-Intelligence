@@ -4,13 +4,13 @@
 
 Can we do Knowledge Distillation without (access to) training data (Zero-Shot)? 
 
-- Data is precious and sensitive – won’t be shared 
-- E.g. : Medical records, Biometric data, Proprietary data 
-- Federated learning – Only models are available, not data
+- Data is precious and sensitive – won’t be shared 数据宝贵且敏感
+- E.g. : Medical records, Biometric data, Proprietary data 医学记录 生物数据
+- Federated learning – Only models are available, not data 联邦学习
 
 ## Existing methods
 
-Knowledge Distillation (Hinton et al., 2015) enables to transfer the complex mapping functions learned by cumber- some models to relatively simpler models.
+Knowledge Distillation (Hinton et al., 2015) enables to transfer the complex mapping functions learned by cumber- some models to relatively simpler models. 
 
 $Teacher$ Model: Generally the Teacher models deliver excellent performance, but they can be **huge and computationally expensive**.  Hence, these models can not be deployed in limited resource environments or when real-time inference is expected.
 
@@ -50,7 +50,7 @@ Let $s \sim p(s)$, be the **random vector that represents the neural softmax out
 
  **Class Similarity Matrix**
 
-The final layer of a typical recogni- tion model will be a fully connected layer with a softmax non-linearity.
+The final layer of a typical recognition model will be a fully connected layer with a softmax non-linearity.
 
 Each neuron in this layer corresponds to a class (k) and its activation is treated as the probability predicted by the model for that class.
 
@@ -68,7 +68,7 @@ $Y^k = [y_1^k,y_2^k,...,y_N^k] \in R^{k \times N}$, be the $N$ softmax vectors c
 $$
 \alpha^k = [\alpha ^k_1, \alpha ^k_2, . . . , \alpha ^k_K]
 $$
-Each row $c_k$ can be treated as the concen-tration parameter ($\alpha$) of the Dirichlet distribution (Dir), which models the distribution of output probability vectors belonging to class $k$.
+Each row $c_k$ can be treated as the concentration parameter ($\alpha$) of the Dirichlet distribution (Dir), which models the distribution of output probability vectors belonging to class $k$.
 $$
 \alpha^k = c_k
 $$

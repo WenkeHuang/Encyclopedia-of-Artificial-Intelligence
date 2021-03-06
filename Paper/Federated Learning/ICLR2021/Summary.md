@@ -124,7 +124,7 @@ We then wish to find the optimal weights $w = <w_1,w_2,...w_N>$ that optimize fo
 
 Efficient personalization with FedFomo：
 $$
-w_n= \frac{\mathcal{L}_i(\theta_i^{\mathcal{l}(t-1)})-\mathcal{L}_i\theta_i^{\mathcal{l}(t)})}{||\theta_n^{\mathcal{l}(t)}-\theta_n^{\mathcal{l}(t-1)}}
+w_n= \frac{\mathcal{L}_i(\theta_i^{\mathcal{l}(t-1)})-\mathcal{L}_i\theta_i^{\mathcal{l}(t)})}{||\theta_n^{\mathcal{l}(t)}-\theta_n^{\mathcal{l}(t-1)}||}
 $$
 如果计算得到的$w_n$参数小于0，则$w_n=max(w_n,0)$, and among positive $w_n$ nomalize with $w_n=\frac{max(w_n,0)}{\sum_n max(w_n,0)}$.
 

@@ -41,7 +41,7 @@ $$
 
 ### Step 1 Train reference model
 
-训练一个reference model 使用有监督的样本数据(X^L,Y^L)$，但是有监督的样本是很少的在这个问题的设定中
+训练一个reference model 使用有监督的样本数据$(X^L,Y^L)$，但是有监督的样本是很少的在这个问题的设定中
 
 reference model$g(\cdot)$可以是一个estimator 或者一组estimators.(我们可以通过更改超参数，例如GP的RBF内核中的方差和长度比例，从单个模型构建多个estimators)
 
