@@ -152,6 +152,8 @@ $$
 
 
 
+
+
 #大数据与弱计算  Knowledge Distilliation
 
 
@@ -170,11 +172,15 @@ $$
 
 [《迁移学习》: 领域自适应(Domain Adaptation)的理论分析 - 小蚂蚁曹凯的文章 - 知乎](https://zhuanlan.zhihu.com/p/50710267)
 
+[Adversarial Discriminative Domain Adaptation](https://zhuanlan.zhihu.com/p/67065333)
 
+[Adversarial Discriminative Domain Adaptation阅读笔记](https://zhuanlan.zhihu.com/p/275694799)
 
 ## 论文
 
 ### Domain Adaptation
 
 ICML_2015	[Unsupervised domain adaptation by backpropagation](http://proceedings.mlr.press/v37/ganin15.pdf)
+
+CVPR_2017	[Adversarial Discriminative Domain Adaptation](https://ieeexplore.ieee.org/document/8099799)
 
