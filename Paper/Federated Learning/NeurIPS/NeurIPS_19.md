@@ -132,6 +132,32 @@ $$
 $r_m \sim \mathcal{N}(0,\rho^2 I)$ is a different independent draw from a  $d$-dimensional Gaussian with covariance of $\rho^2$ .
 
 $\rho^2$ represents device variance: with higher $\rho^2$, the local features differ more representing more personalized targets across devices
+
+## Private Federated Learning with Domain Adaptation
+
+### Problems
+
+- Introducing “noise” in the training process (inputs, parameters, or outputs) makes it difficult to guarantee whether any particular data point was used to train the model. While this noise ensures $\epsilon$-differential privacy for the data point, **it can degrade the accuracy of model predictions.**
+- There exists a large body ofwork on domain adaptation in non-FL systems. In domain adaptation, a model trained over a data set from a source domain is further refined to adapt to a data set from a different target domain.
+
+### Idea
+
+$M_G$ is general model with parameters $\Theta_G$, and $\widehat{y}_G = M_G(x,\Theta_G)$
+
+$M_G$ is shared between all parties, and is trained on all data using FL with differentially private SGD (1), enabling each party contribute to training the general model.
+$M_P$ be a private model of party $i$, parameterized by $\Theta_{P_i}$, and $\widehat{y}_{P_i} = M_{P_i}(x,\Theta_{P_i})$
+
+$M_{P_i}$ could have a different architecture from $M_G$
+
+
 $$
-\widetilde{f}
+\widehat{y}_i = \alpha_i M_G (x,\Theta_G)+(1-\alpha_i(x))M_{P_i}(x,\Theta_{P_i})
 $$
+$\alpha_i(x)$ is called a gating function in the MoE literature.
+$$
+\alpha_i(x)  = \sigma (w_i^T \cdot x + b+i)
+$$
+whether to trust the general model or the private model more for a given input, and the private model $M_{P_i}$ needs to perform well on only the sub-set of points for which the general model fails.
+
+ 这意味着具有异常域的用户对通用模型的影响较小，这可能会增强通用模型的能力。 这也可以为用户的数据提供更多的隐私。
+
