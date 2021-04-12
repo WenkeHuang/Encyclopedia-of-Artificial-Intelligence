@@ -31,7 +31,9 @@ $$
 
 ## Federated Principal Component Analysis
 
+### Idea
 
+In this work we pursue a combined federated learning and differential privacy framework to compute PCA in a decentralised way and provide precise guarantees on the privacy budget.
 
 
 
