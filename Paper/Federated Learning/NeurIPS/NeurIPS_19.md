@@ -182,4 +182,113 @@ A_{\sigma}(i,i)=1+2\sigma \\
 A_{\sigma}(i,i+1)=-\sigma
 $$
 
+## Real-World Image Datasets for Federated Learning
+
+联合学习是一种新的机器学习允许数据各方协作建立机器学习模型，同时保持其数据安全和私有的范例。研究期间联邦学习的努力正在增加在过去的两年中，大部分已经存在作品仍取决于现有的公共数据集和人工分区来模拟数据联合由于缺乏从现实世界的边缘应用程序生成的高质量标记数据。因此，联邦学习的基准和模型评估的进展一直落后。在本文中，我们介绍了一个真实世界的图像数据集。数据集包含900多个由26个路边摄像头和7个对象类别生成的图像，带有详细的边界盒子。数据分布是非IID且不平衡的，反映了典型的现实世界联合学习场景。基于此数据集，我们实现了两种主流的对象检测算法（YOLO和Faster R-CNN），并提供了联合学习中有关模型性能，效率和沟通的广泛基准环境。
+
+## MATCHA: Speeding Up Decentralized SGD via Matching Decomposition Sampling
+### Problems
+
+尽管密集连接的网络拓扑可以确保迭代更快地收敛，但是每次迭代都会花费更多的通信时间/延迟，从而导致更长的训练时间。
+
+### Idea
+
+MATCHA使用基本拓扑的匹配分解采样来并行化工作人员之间的信息交换，从而显着减少通信延迟。
+
+Illustration of the proposed method. Given the base communication graph, we decompose it into disjoint subgraphs (in particular, matchings, in order to allow parallel communications). Then, at each communication round, we carefully sample a subset of these matchings to construct a sparse subgraph of the base topology. Worker nodes are synchronized only through the activated topology.
+
+### Benefit
+
+1. MATCHA provides a highly flexible communication scheme among nodes.
+2. MATCHA gets a 50x reduction in communication delay per iteration, and up to 5x reduction in wall-clock time to achieve the same training accuracy.
+
+## Active Federated Learning
+
+### Problems
+
+Due to privacy concerns users may not want to transmit data from their per- sonal devices, making such centralized training impossible. 
+
+Federated Learning enables the training of models on this data, **but transmission costs between the server and the client are high**, and reducing these costs is important.
+
+### Idea
+
+在本文中，我们介绍了主动联合学习（AFL）来优先培训用户，该用户在该培训迭代过程中对模型更有利。 受主动学习的启发，我们建议使用一个值函数，该函数可以在用户设备上进行评估，然后将评估值返回给服务器，以表明对该用户进行培训的可能效用。 服务器收集这些评估并将其转换为选择下一批用户进行培训的概率。 通过使用简单的与用户数据在当前模型下遭受的损失相关的值函数，我们可以将模型达到特定精度水平所需的训练轮次减少20-70％
+
+#### Sample algorithm
+
+Input: Client Valuations $\{v_1, ..., v_K\}$, tuning parameters $\alpha_1, ..., \alpha_3$, number of clients per round m
+
+Output: Client indices ${k_1, ..., k_m}$
+
+Sort users by $v_k$ 
+
+For the $\alpha_1 K$ users with smallest $v_k, vk = −\infin$
+
+for $k from 1 to K$do
+
+​	$p_k \propto e^{\alpha_2 v_k}$
+
+end
+
+Sample $(1 − \alpha_3)$m users according to their $p_k$, producing set $S^{'}$
+
+Sample $\alpha_3 m$ from the remaining users uniformly at random, producing set $S^{''}$
+
+return $S = S^{'} ∪ S^{''}$
+
+#### Loss valuation
+
+$$
+v_K = \frac{1}{\sqrt{n_k}}l(x_k,y_k;w)
+$$
+
+它已在模型训练期间进行了计算，并且随着模型对客户端数据的执行程度变差而增加。 此外，当数据中存在所需的结构时，它会模仿常见的重采样技术。 如果存在极端的类别不平衡和类别之间的弱分离，则少数类别的数据点的损失将明显高于多数类别的数据点。 因此，我们将首选具有更多少数派数据的用户，以模拟对少数派类别数据的重新采样。 类似地，如果噪声取决于与分类边界的距离，则使用损耗会复制基于余量的重采样技术。 最后，如果所有数据点都具有同等价值，那么拥有更多数据的用户将获得更高的估值。 最重要的是，这些对数据的适应并不需要从业人员知道所利用的特定结构。 这在有关数据信息有限的联合设置中特别重要。
+
+### Conclusion
+
+在本文中，我们提出了主动联合学习（AFL），这是FL的第一个用户队列选择技术，它可以主动适应模型状态和每个客户端上的数据。这种适应性使我们能够以相同的性能训练迭代次数减少20％至70％。给予正式的隐私保证是未来必不可少的工作，但是还有许多其他有趣的扩展。这些实验是在简化条件下完成的，这些条件没有考虑到联合学习在实践中面临的许多问题，而AFL可能可以缓解这些问题。例如，客户可能具有不同的培训可用率(rates of availability for training)。这种可用性可能与客户端上的数据相关联，如果不加以纠正会导致我们的模型存在偏差。还可以考虑可靠性的AFL，可以通过提高对不可靠用户的训练速度来减少这种偏见。另一个挑战是客户不断收集（并可能遗失）数据，并且在许多情况下，分发可能是不稳定的。保持AFL的优势可能需要一种原则上的方法，即确保没有用户花费太长时间而不会刷新其估值。最后，我们的实验和分析集中在分类设置上，但是损失值函数可以用于任何监督问题，并且以更复杂的模型了解AFL将是一个有趣的研究方向。
+
+## Overcoming forgetting in federated learning on non-IID data
+
+### Abstract
+
+我们在非i.d.中解决联合学习的问题。 在这种情况下，局部模型会分离开来，从而阻碍学习。 在与终身学习进行类比的基础上，我们为联合学习调整了灾难性遗忘的解决方案。 **我们在损失函数中增加一个惩罚项，迫使所有局部模型收敛到一个共享的最优值。** 我们证明，对于通信而言，这可以有效地完成（不增加其他隐私风险），并且可以根据分布式设置中节点的数量进行缩放。 我们的实验表明，该方法在MNIST数据集上的图像识别方面优于竞争方法。
+
+### Problems
+
+Federated Learning poses three challenges that make it different from traditional distributed learning. 
+
+The first one is the number of computing stations, which can be in the hundreds of millions. 
+
+The second is **much slower communication** compared to the inter cluster communication found in data centers. 
+
+The third difference, on which we focus in this work, is the **highly non i.i.d. manner** in which the data may be distributed among the devices.
+
+### Overcoming Forgetting in Sequential Lifelong Learning and in Federated Learning
+
+联合学习问题与另一个称为终身学习的基本机器学习问题（以及相关的多任务学习）之间存在着深远的相似之处。 
+
+在“终身学习”中，挑战在于学习任务A，并继续使用相同的模型学习任务B，但又不能“忘记”，而又不会严重损害任务A的性能。 或一般来说，学习任务A1，A2。 。 。 顺序进行，而不会忘记以前不再提供示例的学习任务。
+
+ 因此，除了串行而不是并行学习任务之外，在终身学习中每个任务只能看到一次，而在联合学习中则没有这种限制。 
+
+但是除了这些差异之外，这些范式还面临一个共同的主要挑战-如何学习一项任务而又不干扰在同一模型上学习到的不同任务。
+
+#### Elastic Weight consolidation（EWC）
+
+EWC aims to prevent catastrophic forgetting when moving from learning task A to learning task B. 
+
+The idea is to identify the coordinates in the network parameters $\theta$ that that are the most informative for task A, and then, while task B is being learned, penalize the learner for changing these parameters.
+
+The basic assumption is that deep neural networks are over-parameterized enough, so that there are good chances of finding an optimal solution $\theta_B^*$ to task B in the neighborhood of perviously learned $\theta_A^*$.
+
+
+$$
+\widetilde{L}(\theta) = L_B(\theta)+\lambda(\theta-\theta_A^*)^T diag(\mathcal{I}^*_A)(\theta - \theta_A^*)
+$$
+Due to:
+$$
+log p(\theta | D_A \ and \ D_B) = logp(D_B|\theta)+logp(\theta|D_A)-logp(D_B)
+$$
+
 
