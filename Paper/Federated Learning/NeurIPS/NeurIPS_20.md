@@ -26,8 +26,39 @@ subject \ to: H_i^{(k)} = f_e^{(k)} (W_e^{(k)};X_i^{(k)})
 $$
 
 $$
-\mathop{argmin}_{(W_e^{(k)},W_c^{(k)}}F_c(W_e,W_e^*) = \mathop{argmin}_{W_s} \sum_{k=1}^K \sum_{i=1}^{N^{(k)}} \mathcal{l}_s(f_s(W_S;H_i^{(k)}),y_i^{(k)})
+\mathop{argmin}_{(W_e^{(k)},W_c^{(k)}}F_c(W_e^{(k)},W_c^{(k)}) = \mathop{argmin}_{W_e^{(k)},W_c^{(k)}} \sum_{i=1}^{N^{(k)}} \mathcal{l}_c(f^{(k)}((W_e^{(k)},W_c^{(k)});X_i^{(k)}),y_i^{(k)})
 $$
+
+## Federated Principal Component Analysis
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
