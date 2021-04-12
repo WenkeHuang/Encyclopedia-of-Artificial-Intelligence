@@ -288,7 +288,17 @@ $$
 $$
 Due to:
 $$
-log p(\theta | D_A \ and \ D_B) = logp(D_B|\theta)+logp(\theta|D_A)-logp(D_B)
+log \ p(\theta | D_A \ and \ D_B) = log \ p(D_B|\theta)+log\ p(\theta|D_A)-log\ p(D_B)
+$$
+We get a non Bayesian interpretation:
+$$
+\widetilde{L}(\theta) \approx L_B(\theta)+ \frac{1}{2}(\theta-\theta_A^*)^T H_{L_A} (\theta - \theta_A^*) \approx L_B(\theta)+L_A(\theta)
 $$
 
+
+### FedCurv
+
+$$
+\widetilde{L}_{t,s}(\theta) = L_s(\theta)+\lambda \sum_{j \in S \backslash s} (\theta - \widehat{\theta}_{t-1,j})^T diag(\widehat{\mathcal{I}}_{t-1,j})(\theta-\widehat{\theta}_{t-1,j})
+$$
 
