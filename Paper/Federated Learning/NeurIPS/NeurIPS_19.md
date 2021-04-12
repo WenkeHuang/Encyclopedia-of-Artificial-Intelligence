@@ -161,3 +161,25 @@ whether to trust the general model or the private model more for a given input, 
 
  这意味着具有异常域的用户对通用模型的影响较小，这可能会增强通用模型的能力。 这也可以为用户的数据提供更多的隐私。
 
+## Exploring private federated learning with laplacian smoothing
+
+### Problems
+
+1. However, in fields like medical or financial research, sensitive data are collected by different parties, like hospitals or banks, who are not willing to share their own data with others.
+2. 仅通过直接将模型训练与直接访问原始训练数据的需求脱钩，仍然不足以保护敏感数据，其信息将由训练有素的模型揭示。 攻击者可能会在训练过程中推断出特定记录的存在，甚至可能会通过攻击已发布的模型来恢复训练集中的人脸图像
+3. 差异性隐私的一个主要问题在于其对训练后的模型的实用性的可能显着降低。 最近，拉普拉斯平滑（LS）被证明是减少方差并避免随机梯度下降（SGD）中伪造极小值的好选择，因此有望改善差分隐私学习中的效用
+
+### Idea
+
+在本文中，我们将基于拉普拉斯平滑的效用增强方案应用于差分私有联合学习（DP-Fed-LS），其中在注入高斯噪声的情况下参数聚合得到了改善
+$$
+w^{k+1} = w^k - \eta A_{\sigma}^{-1}\triangledown f_i(w^k)
+$$
+
+$$
+A_{\sigma} = I + \sigma L \ where: \\
+A_{\sigma}(i,i)=1+2\sigma \\
+A_{\sigma}(i,i+1)=-\sigma
+$$
+
+
