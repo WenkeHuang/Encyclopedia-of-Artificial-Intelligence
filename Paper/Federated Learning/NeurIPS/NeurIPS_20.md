@@ -99,7 +99,9 @@ Our second contribution is the design of several optimal methods matching these 
 
 最后，我们提供了一组数值实验来说明Per-FedAvg的两种不同的一阶逼近的性能以及它们与FedAvg方法的比较，并表明与 FedAvg的解决方案。
 
+## Tackling the Objective Inconsistency Problem in Heterogeneous Federated Optimization
 
+本文提出了一个框架来分析现有的FL优化算法（例如 FedAvg和FedProx）在data heterogeneous情况下的收敛性，并且提出了FedNova算法 - a normalized averaging algorithm that eliminates objective inconsistency while preserving fast error convergence.
 
 
 

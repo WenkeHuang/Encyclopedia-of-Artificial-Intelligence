@@ -138,7 +138,7 @@ $\rho^2$ represents device variance: with higher $\rho^2$, the local features di
 ### Problems
 
 - Introducing “noise” in the training process (inputs, parameters, or outputs) makes it difficult to guarantee whether any particular data point was used to train the model. While this noise ensures $\epsilon$-differential privacy for the data point, **it can degrade the accuracy of model predictions.**
-- There exists a large body ofwork on domain adaptation in non-FL systems. In domain adaptation, a model trained over a data set from a source domain is further refined to adapt to a data set from a different target domain.
+- There exists a large body of work on domain adaptation in non-FL systems. In domain adaptation, a model trained over a data set from a source domain is further refined to adapt to a data set from a different target domain.
 
 ### Idea
 
@@ -196,6 +196,12 @@ $$
 MATCHA使用基本拓扑的匹配分解采样来并行化工作人员之间的信息交换，从而显着减少通信延迟。
 
 Illustration of the proposed method. Given the base communication graph, we decompose it into disjoint subgraphs (in particular, matchings, in order to allow parallel communications). Then, at each communication round, we carefully sample a subset of these matchings to construct a sparse subgraph of the base topology. Worker nodes are synchronized only through the activated topology.
+
+**Disjoint links allow parallel communication** Save communication delay
+
+**Comm.Delay=number of activate matchings** Easy to control
+
+**Communcatite over matching sequentially** Avoid deadlock
 
 ### Benefit
 
