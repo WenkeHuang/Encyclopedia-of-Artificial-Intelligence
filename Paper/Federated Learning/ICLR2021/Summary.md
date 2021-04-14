@@ -124,7 +124,7 @@ We then wish to find the optimal weights $w = <w_1,w_2,...w_N>$ that optimize fo
 
 Efficient personalization with FedFomo：
 $$
-w_n= \frac{\mathcal{L}_i(\theta_i^{\mathcal{l}(t-1)})-\mathcal{L}_i\theta_i^{\mathcal{l}(t)})}{||\theta_n^{\mathcal{l}(t)}-\theta_n^{\mathcal{l}(t-1)}||}
+w_n= \frac{\mathcal{L}_i(\theta_i^{\mathcal{l}(t-1)})-\mathcal{L}_i\theta_n^{\mathcal{l}(t)})}{||\theta_n^{\mathcal{l}(t)}-\theta_i^{\mathcal{l}(t-1)}||}
 $$
 如果计算得到的$w_n$参数小于0，则$w_n=max(w_n,0)$, and among positive $w_n$ nomalize with $w_n=\frac{max(w_n,0)}{\sum_n max(w_n,0)}$.
 
@@ -207,10 +207,29 @@ $W^{p-1,t+1}_g \backslash W_g^{p,t+1}$ 代表属于$W^{p-1,t+1}_g$但不属于 $
 #### Contribution
 
 - 我们研究了使用服务器和客户端优化器进行联合优化的通用框架。该框架概括了许多现有的联合优化方法，包括FEDAVG。
-
 - 我们使用此框架来设计新颖的，跨设备兼容的自适应联合优化方法，并在一般非凸设置下提供收敛分析。据我们所知，这是使用自适应服务器优化进行FL的第一种方法。我们展示了本地步骤数量与客户之间的异质性之间的重要相互作用。
 - 我们引入了全面且可重现的经验基准，用于比较联合优化方法。这些基准测试包括涉及图像和文本数据的七种多样且具有代表性的FL任务，具有不同数量的异构性和客户数量。
 - 我们展示了自适应优化器在整个过程中的强大经验性能，并在常用基准上进行了改进。我们的结果表明，我们的方法可以更轻松地进行调整，并突出显示它们在跨设备设置中的实用性。
+
+### Algorithm
+
+$$
+\Delta_t  = \beta_1\Delta_{t-1}+(1-\beta_1)(\frac{1}{|S|\sum_{i \in S}\Delta_i^t})
+$$
+
+$$
+v_t = v_{t-1}+(1-\beta_1)(\frac{1}{|S|}\sum_{i \in S} \Delta_i^t) (FEDADAGRAD)
+$$
+
+$$
+v_t = v_{t-1}-(1-\beta_2)\Delta_t^2sign(v_{t-1}-\Delta_t^2)(FEDYOGI)
+$$
+
+$$
+v_t = \beta_2v_{t-1}+(1-\beta_2)\Delta_t^2(FEDADAM)
+$$
+
+
 
 ### FEDMIX: Approximation Of Mixup Under Mean Augmented Federated Learning
 
