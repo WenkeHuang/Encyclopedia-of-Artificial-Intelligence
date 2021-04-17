@@ -103,11 +103,20 @@ Our second contribution is the design of several optimal methods matching these 
 
 本文提出了一个框架来分析现有的FL优化算法（例如 FedAvg和FedProx）在data heterogeneous情况下的收敛性，并且提出了FedNova算法 - a normalized averaging algorithm that eliminates objective inconsistency while preserving fast error convergence.
 
+## Ensemble Distillation for Robust Model Fusion in Federated Learning
 
+### Idea
 
+Specifically, we propose ensemble distillation for model fusion, i.e. training the central classifier through unlabeled data on the outputs of the models from the clients.
 
+模型同构的情况下，对于每一轮可以分为两个步
+	第一步：和FedAvg的过程一样，随机选择一些客户端发送上一轮的聚合模型参数，客户端利用本地数据更新参数并将更新后的参数发送给服务端，服务端将接收到的模型参数取权值平均。
 
-
+​	服务器需要将$|S_t|$客户端老师模型的集成蒸馏到一个服务端学生模型。在每一步中，取样一个batch的未标记的数据或者生成器生成的数据，然后进行蒸馏
+$$
+x_{t,j}:=x_{t,j-1}-\eta\frac{\delta KL(\sigma(\frac{1}{|S_t|}\sum_{k\in S_t}f(\widehat{x}_t^k,d)),\sigma(f(x_{t,j-1},d)))}{\delta x_{t,j-1}}
+$$
+Here KL stands for Kullback–Leibler divergence, $\sigma$ is the softmax function, and $\eta$ is the stepsize.
 
 
 
