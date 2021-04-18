@@ -128,7 +128,7 @@ $$
 $$
 模型要应用到数据集分为两部分：源域（source domain）和目标域（target domain）。前者是可以很方便地训练的数据集，后者是很少有标签或者就没标签的数据集。
 
-这就是一个半监督或者无监督的学习问题。由于存在dataset bias，这个判别模型不能直接移植到目标域，否则下过会很差，在本文结构中CNN的作用主要是找到合适的features，这些features可以送到全连接分类器进行分类，同时送到domain classifier ，让domain分类器得到如何分辨domian的梯度，经过梯度反转，使得CNN搞出来的features更加迷惑domain classifier，最后使得domain classifier无法分辨出这两个domain。这时，任务就达到了，因为在无法分辨两个分类器的情况下，这些features彩色这两个domain共享的，这时把CNN网络迁移到另外这个分布，效果会好很多。
+这就是一个半监督或者无监督的学习问题。由于存在dataset bias，这个判别模型不能直接移植到目标域，否则效果会很差，在本文结构中CNN的作用主要是找到合适的features，这些features可以送到全连接分类器进行分类，同时送到domain classifier ，让domain分类器得到如何分辨domian的梯度，经过梯度反转，使得CNN搞出来的features更加迷惑domain classifier，最后使得domain classifier无法分辨出这两个domain。这时，任务就达到了，因为在无法分辨两个分类器的情况下，这些features彩色这两个domain共享的，这时把CNN网络迁移到另外这个分布，效果会好很多。
 
 
 
@@ -150,10 +150,6 @@ $$
 $$
 <img src="./img/UDA_Visualization.jpeg" alt="UDA_Visualization" style="zoom:80%;" />
 
-
-
-
-
 #大数据与弱计算  Knowledge Distilliation
 
 
@@ -163,6 +159,16 @@ $$
 
 
 #特定应用 Self-Supervised Learning 
+
+迁移学习很重要的一种形式，是把别人学到的迁移到自己的这里来，但是如果别人的数据是没有标签的呢，那么很自然，如果源数据是无标签的，我们很难说对源数据进行有监督的学习。那么自监督学习在这里会发挥很重要的作用。
+
+<img src="./img/SSL_Development.jpg" alt="SSL_Development.jpg" style="zoom:80%;" />
+
+在这里 着重讲两篇文章，
+
+# 迁移学习的理论保障
+
+
 
 # 引用
 
@@ -175,6 +181,12 @@ $$
 [Adversarial Discriminative Domain Adaptation](https://zhuanlan.zhihu.com/p/67065333)
 
 [Adversarial Discriminative Domain Adaptation阅读笔记](https://zhuanlan.zhihu.com/p/275694799)
+
+
+
+[最简单的self-supervised方法](https://zhuanlan.zhihu.com/p/355523266)
+
+[Self-Supervised 总结](https://zhuanlan.zhihu.com/p/357830995)
 
 ## 论文
 
