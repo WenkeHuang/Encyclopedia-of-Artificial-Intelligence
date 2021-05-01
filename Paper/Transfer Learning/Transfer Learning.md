@@ -44,12 +44,12 @@ Example：
 
 机器学习已经被广泛应用于现实生活中。在这些应用中，也存在着一些特定的应用，它 们面临着一些现实存在的问题。比如推荐系统的冷启动问题。一个新的推荐系统，没有足够的用户数据，如何进行精准的推荐? 一个崭新的图片标注系统，没有足够的标签，如何进行 精准的服务？现实世界中的应用驱动着我们去开发更加便捷更加高效的机器学习方法来加 以解决。
 
-| 矛盾                   | 传统机器学习                     | 迁移学习       |
-| ---------------------- | -------------------------------- | -------------- |
-| 大数据与少标注         | 增加人工标注，但是昂贵且耗时     | 数据的迁移标注 |
-| 大数据与弱计算         | 只能依赖强大计算能力，但是受众少 | 模型迁移       |
-| 普适化模型与个性化需求 | 通用模型无法满足个性化需求       | 模型自适应调整 |
-| 特定应用               | 冷启动问题无法解决               | 数据迁移       |
+| 矛盾                   | 传统机器学习                     | 迁移学习                                        |
+| ---------------------- | -------------------------------- | ----------------------------------------------- |
+| 大数据与少标注         | 增加人工标注，但是昂贵且耗时     | 数据的迁移标注(Domain Adaptation)               |
+| 大数据与弱计算         | 只能依赖强大计算能力，但是受众少 | 模型迁移(Knowledge Distillation)                |
+| 普适化模型与个性化需求 | 通用模型无法满足个性化需求       | 模型自适应调整 (Personalized Federaed Learning) |
+| 特定应用               | 冷启动问题无法解决               | 数据迁移 (Self-Supervised Learning)             |
 
 ## 分类
 
@@ -96,9 +96,9 @@ Example：
 
 #大数据与少标注 Domain Adaptation
 
-在MNIST数据集上训练出来的网络，同样去跑相近的数据集，比如MINIST-M，准确率大打折扣？或者是想跑另外一个没有标签的数据集却没有精力去标注？
+## Unsupervised Domain Adaptation by Backpropagation
 
-**Unsupervised Domain Adaptation by Backpropagation**
+在MNIST数据集上训练出来的网络，同样去跑相近的数据集，比如MINIST-M，准确率大打折扣？或者是想跑另外一个没有标签的数据集却没有精力去标注？
 
 对于一个常规的网络而言，一般由特征提取backbone和分类器classifer组成
 
@@ -150,9 +150,80 @@ $$
 $$
 <img src="./img/UDA_Visualization.jpeg" alt="UDA_Visualization" style="zoom:80%;" />
 
+那么在这篇文章中，他是希望能够学习一个通用的特征提取，能够有效地提取不带Domain Gap的数据，因而是target映射到source ,然后用source的分类器来处理，那么能不能就是说希望能够不带这么严格的约束，我们希望源域和目标域能各自提取特征的方式。
+
+## Adversarial discriminative domain adaptation
+
+1. 先通过source domain的样本和标签训练Ms和C 
+
+<img src="./img/ADDA/Loss_1.png" alt="Loss_1"/>
+
+2. 保持Ms和C不变，用Ms初始化Mt，并交替优化第二项第三项，获得D和Mt 
+
+<img src="./img/ADDA/Loss_2.png" alt="Loss_2" />
+
+3. testing stage：target domain的sample直接通过Mt和C获得预测的标签。
+
+<img src="./img/ADDA/Loss_3.png" alt="Loss_3"/>
+
+![ADDA](./img/ADDA.png)
+
 #大数据与弱计算  Knowledge Distilliation
 
+没钱搞数据，没钱搞GPU 知识蒸馏闪亮登场
 
+## Distilling the Knowledge in a Neural Network
+
+将一个复杂模型的knowledge ，transfer到一个简单的模型，这也正是**蒸馏**所做的事情。
+
+**Main Idea**
+
+模型压缩和加速
+
+“蒸馏”（distillation）：把大网络的知识压缩成小网络的一种方法 
+
+“专用模型”（specialist models）：对于一个大网络，可以训练多个专用网络来提升大网络的模型表现
+
+神经网络通常通过使用“softmax”输出层来产生类概率，该输出层通过将logit后的结果相互比较转化：
+$$
+q_i = \frac{exp(z_i/T)}{\sum_iexp(z_j/T)}
+$$
+
+1. 当温度T越高的时候，软目标越平滑，信息不会集中在少数分量上，这样增大温度参数T相当于放大（蒸馏出来）这些小概率值分量所携带的信息；
+2. 不管温度T怎么取值，Soft target都有忽略小的zi携带的信息的倾向（产生的Prob小）
+
+在常规中设置的T=1其中T是通常设置为1的温度。使用较高的T值可以在类上产生更软的概率分布。
+
+那么之后我们可以通过有限的数据，通过老师模型给予的SoftLabel来教授学生模型
+
+![kd](./img/KD.png)
+
+## Ask, acquire, and attack: data-free UAP generation using class impressions
+
+如果 我是说如果，这个有钱训练的厂家连他们的数据也不愿意给你，虽然过于恶心，但是也是可能的，他们只把他们的模型给你，那么这种情况下该如何学习呢？
+
+他不给？行，那咱就自己去造出来
+
+数据没有，我们就制造标签，通过标签反向约束
+
+![AAA](./img/AAA.png)
+
+更新噪声直到它能使分类器输出一个指定的类，下面的图就是更新后的噪声的样子，根据这图看出一些类:
+$$
+CI_c = \mathop{argmax}_x f^{ps/m}_c(x)
+$$
+
+
+![reuslt](./img/AAA/result.png)
+
+当然这么得到的图片有几个问题
+
+1. 图片的丰富性不足，每个类内的差别都较小 [1,0,0,0,0] 
+2. 没有考虑类之间的联系：猫和狗比猫和猪更相似
+
+**Zero-shot knowledge distillation in deep networks (ICML 2019)** 类内关系 狄利克雷分布
+
+**Data-free learning of student networks (ICCV 2019)** 生成器更加多样 
 
 #普适化模型与个性化需求  Personalized Model
 
@@ -164,7 +235,23 @@ $$
 
 <img src="./img/SSL_Development.jpg" alt="SSL_Development.jpg" style="zoom:80%;" />
 
-在这里 着重讲两篇文章，
+在这里 着重讲两篇文章
+
+首先，一般而言 对于一个分类网络，是由backbone和classifier两层组成的，分别负责提取特征，再根据特征去分类，那么理论上而言，我们如果能够获得一个能够有效对图像特征进行分类聚合的backbone就是可以的，那么我们便考虑如何在不使用label的情况下，训练得到了一个可以有效提取特征的backbone
+
+### Unsupervised embedding learning via invariant and spreading instance feature
+
+**同类别样本距离相近，从而会集中在一起；不同类别样本距离较大，从而会分散分布**	
+
+我们将任意一张图片通过backbone 都会得到一个特征层embedding layer
+
+1）视觉相似图片对应的特征embedding应该相近；
+
+2）不相似图片对饮过的特征embedding应该分散。
+
+没有类别标签，我们使用实例监督来近似“正集中负分散”的特性。特别地，同一个实例使用不同数据增强方式得到的embedding特征应该是一致的，而不同实例应该分散。
+
+
 
 # 迁移学习的理论保障
 
@@ -178,11 +265,17 @@ $$
 
 [《迁移学习》: 领域自适应(Domain Adaptation)的理论分析 - 小蚂蚁曹凯的文章 - 知乎](https://zhuanlan.zhihu.com/p/50710267)
 
+### Domain Adaptation
+
 [Adversarial Discriminative Domain Adaptation](https://zhuanlan.zhihu.com/p/67065333)
 
 [Adversarial Discriminative Domain Adaptation阅读笔记](https://zhuanlan.zhihu.com/p/275694799)
 
+### Knowledge Distilliation
 
+[简单易懂的softmax交叉熵损失函数求导](https://blog.csdn.net/qian99/article/details/78046329)
+
+### Self-Supervised
 
 [最简单的self-supervised方法](https://zhuanlan.zhihu.com/p/355523266)
 
@@ -195,4 +288,14 @@ $$
 ICML_2015	[Unsupervised domain adaptation by backpropagation](http://proceedings.mlr.press/v37/ganin15.pdf)
 
 CVPR_2017	[Adversarial Discriminative Domain Adaptation](https://ieeexplore.ieee.org/document/8099799)
+
+### Knowledge Distilliation
+
+NIPS_2014 [Distilling the Knowledge in a Neural Network](https://arxiv.org/abs/1503.02531)
+
+ECCV_2018 [Ask, acquire, and attack: data-free UAP generation using class impressions](https://arxiv.org/abs/1808.01153)
+
+ICML_2019 [Zero-shot knowledge distillation in deep networks](https://arxiv.org/abs/1905.08114)
+
+ICCV_2019 [Data-free learning of student networks](https://arxiv.org/abs/1904.01186)
 
