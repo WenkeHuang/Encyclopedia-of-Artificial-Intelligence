@@ -382,8 +382,6 @@ $$
 
 从最早的要求大量的负样本，到通过停止梯度传播验证负样本并非不可或缺，到本文切换了一直以来的对比学习去训练的思路，转而对特征本身出发，推开了另一扇大门。对比而言，相比于最早的方法，本文仅仅是换了一个loss function (+大维度的特征)。不过，大的维度相比于增加batchsize的代价要小得多，就是多占一点的显存。
 
-
-
 # 迁移学习的理论保障
 
 
@@ -413,6 +411,10 @@ $$
 [最简单的self-supervised方法](https://zhuanlan.zhihu.com/p/355523266)
 
 [Self-Supervised 总结](https://zhuanlan.zhihu.com/p/357830995)
+
+[Moco三部曲](https://mp.weixin.qq.com/s?__biz=Mzg4MjQ1NzI0NA==&mid=2247494571&idx=1&sn=4b35d19caf5015b33fc40ce8a8433869&chksm=cf54c458f8234d4e6563ba94ba3a8f08c74819556a223338413e3f1c27c730915abf7842e98a&scene=21#wechat_redirect)
+
+[Self-Supervised: 如何避免退化解](https://mp.weixin.qq.com/s?__biz=Mzg4MjQ1NzI0NA==&mid=2247494486&idx=1&sn=dd8700c12d394bcc4eb032ed09b508b7&chksm=cf54c4a5f8234db3df5d82cc7839a6d8dc38991e495bfbda0f3b75a643c1686f1fe5c93502a3&scene=21#wechat_redirect)
 
 ## 论文
 
