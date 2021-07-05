@@ -40,7 +40,7 @@ p(\theta|D)=\frac{p(D|\theta) \cdot p(\theta)}{p(D)}
 $$
 
 $$
-log \ p(\theta|D)= log \ (p(D|\theta) + log \ p(\theta)-log \ p(D)
+log \ p(\theta|D)= log \ p(D|\theta) + log \ p(\theta)-log \ p(D)
 $$
 
 

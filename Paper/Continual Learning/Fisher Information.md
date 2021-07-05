@@ -1,3 +1,5 @@
+https://wiseodd.github.io/techblog/2018/03/11/fisher-information/
+
 Fisher information的直观定义就是观测数据蕴含的信息量
 
 如果从定义出发，Fisher information代表给定数据下，似然函数对估计参数的敏感度。敏感度越大，越有利于估计。类似的理解也可以从deviance的角度来看
