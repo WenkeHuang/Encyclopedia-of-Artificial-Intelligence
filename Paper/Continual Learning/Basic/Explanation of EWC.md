@@ -2,71 +2,141 @@
 
 ## Likelihood Function & Probability Function
 
-对于这个函数： $p(x|\theta)$ 输入有两个：x表示某一个具体的数据； $\theta$ 表示模型的参数
-
-如果 $\theta$  是已知确定的， 是x变量，这个函数叫做概率函数(probability function)，它描述对于不同的样本点  x，其出现概率是多少
-
-如果 x 是已知确定的， $\theta$  是变量，这个函数叫做似然函数(likelihood function), 它描述对于不同的模型参数，出现  x 这个样本点的概率是多少
+一文搞懂极大似然估计 - 忆臻的文章 - 知乎 https://zhuanlan.zhihu.com/p/26614750
 
 ## Maximum Likelihoood Estimation & Bayesian Estimation
 
-**解决问题的本事就是求$\theta$**
+聊一聊机器学习的MLE和MAP：最大似然估计和最大后验估计 - 夏飞的文章 - 知乎 https://zhuanlan.zhihu.com/p/32480810
 
-1. **频率学派**
+## Gradient & Jacobi Matrix & Hessian Matrix
 
-存在唯一真值 ![[公式]](https://www.zhihu.com/equation?tex=%5Ctheta+) 。举一个简单直观的例子--抛硬币，我们用 ![[公式]](https://www.zhihu.com/equation?tex=P%28head%29) 来表示硬币的bias。抛一枚硬币100次，有20次正面朝上，要估计抛硬币正面朝上的bias ![[公式]](https://www.zhihu.com/equation?tex=P%28head%29%3D%5Ctheta) 。在频率学派来看，![[公式]](https://www.zhihu.com/equation?tex=%5Ctheta) = 20 / 100 = 0.2，很直观。当数据量趋于无穷时，这种方法能给出精准的估计；然而缺乏数据时则可能产生严重的偏差。例如，对于一枚均匀硬币，即 ![[公式]](https://www.zhihu.com/equation?tex=%5Ctheta) = 0.5，抛掷5次，出现5次正面 (这种情况出现的概率是1/2^5=3.125%)，频率学派会直接估计这枚硬币 ![[公式]](https://www.zhihu.com/equation?tex=%5Ctheta) = 1，出现严重错误。
+Let $f: \mathbb{R}^n \rightarrow \mathbb{R}$ be a scalar field. The gradient, $\nabla f: \mathbb{R}^n \rightarrow \mathbb{R}^n$ is a vector, such that $(\nabla f)_j = \partial f/ \partial x_j$. Because every point in $\text{dom}(f)$ is mapped to a vector, then $\nabla f$ is a vector field.
 
-2. **贝叶斯学派**
+https://math.stackexchange.com/questions/3680708/what-is-the-difference-between-the-jacobian-hessian-and-the-gradient
 
- ![[公式]](https://www.zhihu.com/equation?tex=%5Ctheta) 是一个随机变量，符合一定的概率分布。在贝叶斯学派里有两大输入和一大输出，输入是先验 (prior)和似然 (likelihood)，输出是后验 (posterior)。*先验*，即 ![[公式]](https://www.zhihu.com/equation?tex=P%28%5Ctheta%29) ，指的是在没有观测到任何数据时对 ![[公式]](https://www.zhihu.com/equation?tex=%5Ctheta) 的预先判断，例如给我一个硬币，一种可行的先验是认为这个硬币有很大的概率是均匀的，有较小的概率是是不均匀的；*似然*，即 ![[公式]](https://www.zhihu.com/equation?tex=P%28X%7C%5Ctheta%29) ，是假设 ![[公式]](https://www.zhihu.com/equation?tex=%5Ctheta) 已知后我们观察到的数据应该是什么样子的；*后验*，即 ![[公式]](https://www.zhihu.com/equation?tex=P%28%5Ctheta%7CX%29) ，是最终的参数分布。贝叶斯估计的基础是贝叶斯公式，如下：
-$$
-P(\theta|X)=\frac{P(X|\theta) \times P(\theta)}{P(X)}
-$$
-这里有两点值得注意的地方：
+- Gradient: Vector of first order derivatives of a scalar field.
+- Jacobian: Matrix of gradients for components of a vector field.
+- Hessian: Matrix of second order mixed partials of a scalar field.
 
-- 随着数据量的增加，参数分布会越来越向数据靠拢，先验的影响力会越来越小
-- 如果先验是uniform distribution，则贝叶斯方法等价于频率方法。因为直观上来讲，先验是uniform distribution本质上表示对事物没有任何预判
-
-**MLE**
-
-Maximum Likelihood Estimation, MLE是频率学派常用的估计方法！
-
-假设数据 ![[公式]](https://www.zhihu.com/equation?tex=x_1%2C+x_2%2C+...%2C+x_n+) 是i.i.d.的一组抽样，![[公式]](https://www.zhihu.com/equation?tex=X+%3D+%28x_1%2C+x_2%2C+...%2C+x_n%29) 。其中i.i.d.表示Independent and identical distribution，独立同分布。那么MLE对 ![[公式]](https://www.zhihu.com/equation?tex=%5Ctheta) 的估计方法可以如下推导：
-
-![[公式]](https://www.zhihu.com/equation?tex=%5Cbegin%7Balign%2A%7D+%5Chat%7B%5Ctheta%7D_%5Ctext%7BMLE%7D+%26%3D+%5Carg+%5Cmax+P%28X%3B+%5Ctheta%29+%5C%5C+%26%3D+%5Carg+%5Cmax+P%28x_1%3B+%5Ctheta%29+P%28x_2%3B+%5Ctheta%29+%5Ccdot%5Ccdot%5Ccdot%5Ccdot+P%28x_n%3B%5Ctheta%29+%5C%5C+%26+%3D+%5Carg+%5Cmax%5Clog+%5Cprod_%7Bi%3D1%7D%5E%7Bn%7D+P%28x_i%3B+%5Ctheta%29+%5C%5C+%26%3D+%5Carg+%5Cmax+%5Csum_%7Bi%3D1%7D%5E%7Bn%7D+%5Clog+P%28x_i%3B+%5Ctheta%29+%5C%5C+%26%3D+%5Carg+%5Cmin+-+%5Csum_%7Bi%3D1%7D%5E%7Bn%7D+%5Clog+P%28x_i%3B+%5Ctheta%29+%5Cend%7Balign%2A%7D)
-
-
-
-**Bayes's Rule**
-$$
-p(\theta|D)=\frac{p(D|\theta) \cdot p(\theta)}{p(D)}
-$$
+## Taylor's Formula
 
 $$
-log \ p(\theta|D)= log \ p(D|\theta) + log \ p(\theta)-log \ p(D)
+\begin{align*}
+   f(x) \approx f(a) + Df(a) (x-a)
+   +  \frac{1}{2} (x-a)^T Hf(a) (x-a).
+\end{align*}
 $$
 
+雅可比矩阵、黑森矩阵、泰勒展开式 - 致Great的文章 - 知乎 https://zhuanlan.zhihu.com/p/90496291
 
-Hence
-$$
-log \ p(\theta|D)= log \ (p(D_B|\theta) + log \ p(\theta|D_A)-log \ p(D_B)
-$$
-Note that the left hand side is still describing the posterior probability of the parameters given the entire dataset, while the right hand side only depends on the loss function for task B $log \ p(D_B|\theta)$
+基于Hessian矩阵，就可以判断多元函数的极值情况，结论如下：
 
-$p(\theta|A)$ : This posterior probability must contain information about **which parameters were important to task A and is therefore the key to implementing EWC.**
+- 如果是正定矩阵，则临界点处是一个局部极小值
+- 如果是负定矩阵，则临界点处是一个局部极大值
+- 如果是不定矩阵，则临界点处不是极值
+
+## Leibniz integral rule
+
+https://en.wikipedia.org/wiki/Leibniz_integral_rule
+$$
+\frac{d}{dx}(\int_{a(x)}^{b(x)} f(x,t) dt)=\int_{a(x)}^{b(x)} \frac{\partial }{\partial x}f(x,t) dt +f( x, b(x)) \frac{db}{dx}-f( x, a(x)) \frac{da}{dx}
+$$
+If $a(x)$ and $b(x)$ are constants (i.e., $a\neq a(x)$ and $b\neq b(x)$, then $\frac{da}{dx}=0$ and $\frac{db}{dx}=0$and hence the first theorem becomes:
+$$
+\frac{d}{dx}(\int_{a}^{b} f(x,t) dt)=\int_{a}^{b} \frac{\partial }{\partial x}f(x,t) dt
+$$
+https://math.stackexchange.com/questions/3231347/leibniz-integral-rule-and-fundamental-thm-of-calculsdifferences
+
+积分符号内取微分是一种什么方法？ - 罗旻杰的回答 - 知乎 https://www.zhihu.com/question/24481887/answer/27948494
+
+积分符号内取微分是一种什么方法？ - 战神阿瑞斯的回答 - 知乎 https://www.zhihu.com/question/24481887/answer/433338589
+
+## Fisher Information & Hessian
+
+https://math.stackexchange.com/questions/265917/intuitive-explanation-of-a-definition-of-the-fisher-information
+
+Now you could see why summarizing uncertainty (curvature) about the likelihood function takes the particular formula of Fisher information.
+
+[Fisher] Information may be seen to be a measure of the "curvature" of the support curve near the maximum likelihood estimate of θ. A "blunt" support curve (one with a shallow maximum) would have a low negative expected second derivative, and thus low information; while a sharp one would have a high negative expected second derivative and thus high information.
+
+
+
+To answer an additional question by the OP, I will show what the expectation of the score is zero. Since $p \left( x, \theta \right)$ is a density
+$$
+\begin{eqnarray*}
+  \int p \left( x ; \theta \right) \mathrm{d} x & = & 1
+\end{eqnarray*}
+$$
+Take derivatives on both sides
+$$
+\begin{eqnarray*}
+  \frac{\partial}{\partial \theta} \int p \left( x ; \theta \right) \mathrm{d}
+  x & = & 0
+\end{eqnarray*}
+$$
+Looking on the left hand side (**Leibniz integral rule**)
+$$
+\begin{eqnarray*}
+  \frac{\partial}{\partial \theta} \int p \left( x ; \theta \right) \mathrm{d}
+  x & = & \int \frac{\partial p \left( x ; \theta \right)}{\partial \theta}
+  \mathrm{d} x\\
+  & = & \int \frac{\frac{\partial p \left( x ; \theta \right)}{\partial
+  \theta}}{p \left( x ; \theta \right)} p \left( x ; \theta \right) \mathrm{d}
+  x\\
+  & = & \int \frac{\partial \log p \left( x ; \theta \right)}{\partial
+  \theta} p \left( x ; \theta \right) \mathrm{d} x\\
+  & = & E \left[ \frac{\partial \ell \left( \theta ; x \right)}{\partial
+  \theta} \right]
+\end{eqnarray*}
+$$
+**Thus the expectation of the score is zero.**
+
+## Elastic Weight Consolidation (EWC)
+
+Continual Learning 笔记: EWC / Online EWC / IS / MAS - Renovamen的文章 - 知乎 https://zhuanlan.zhihu.com/p/205073566
+
+终身持续学习-可塑权重巩固（Elastic Weight Consolidation） - Glimmer的文章 - 知乎 https://zhuanlan.zhihu.com/p/86365066
+
+作者有一处错误：
+$$
+\sigma^2 = -\frac{1}{f^{''}(\theta_A^*)}
+$$
+**Kernel**
+$$
+precision = \frac{1}{\sigma^2}=- E \left[ \frac{\partial^2 \ell \left( \theta ; x \right)}{\partial
+  \theta^2} \right]=
+  V \left[ \frac{\partial \ell \left( \theta ; x \right)}{\partial \theta}
+  \right]
+$$
+由于 我们是极大似然估计的模型$\theta$, 所以用expectation 代表真实的value
+
+**Algorithm**
+$$
+\theta = arg \min L_B(\theta)-\log P(\theta|D_A)
+$$
+
+$$
+P(\theta|D_A) = N(\sigma,\mu)\\
+log(P(\theta|D_A))= \log \frac{1}{\sqrt{2\pi}\sigma} - \frac{(\theta-\mu)^2}{2\sigma^2}
+$$
+
+$$
+f(\theta)=log(P(\theta|D_A)=f(\theta_A^*)+\frac{1}{2}(\theta-\theta_A^*)f^"(\theta_A^*)
+$$
+
+$$
+\mu =\theta_A^* \\
+\sigma = - \frac{1}{f^"(\theta_A^*)}
+$$
+
+$$
+\theta = arg \min L_B(\theta)-f(\theta_A^*)-\frac{1}{2}(\theta-\theta_A^*)f^"(\theta_A^*)\\
+=arg \min L_B(\theta)-f(\theta_A^*)-\frac{1}{2}(\theta-\theta_A^*) E \left[ \frac{\partial^2 \ell \left( \theta ; x \right)}{\partial
+  \theta^2} \right]\\
+  arg \min L_B(\theta)-f(\theta_A^*)+\frac{1}{2}(\theta-\theta_A^*)  V \left[ \frac{\partial \ell \left( \theta ; x \right)}{\partial \theta}
+  \right]
+$$
+
 $$
 \mathcal{L}(\theta) = \mathcal{L}_B(\theta)+\sum_i \frac{\lambda}{2}F_i(\theta_i-\theta^*_{A,i})^2
 $$
-$\mathcal{L}_B(\theta)$ is the loss for task B only, $\lambda$ sets how important the old task is compared to the new one and $i$ labels each parameter
-
-## Reference
-
-聊一聊机器学习的MLE和MAP：最大似然估计和最大后验估计 - 夏飞的文章 - 知乎 https://zhuanlan.zhihu.com/p/32480810
-
-
-
-
-
-
-
-=
