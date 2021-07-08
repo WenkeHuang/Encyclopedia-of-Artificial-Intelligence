@@ -115,8 +115,13 @@ $$
 \theta = arg \min L_B(\theta)-\log P(\theta|D_A)
 $$
 
+
 $$
-P(\theta|D_A) = N(\sigma,\mu)\\
+P(\theta|D_A) = N(\sigma,\mu)
+$$
+
+
+$$
 log(P(\theta|D_A))= \log \frac{1}{\sqrt{2\pi}\sigma} - \frac{(\theta-\mu)^2}{2\sigma^2}
 $$
 
@@ -124,16 +129,32 @@ $$
 f(\theta)=log(P(\theta|D_A)=f(\theta_A^*)+\frac{1}{2}(\theta-\theta_A^*)f^"(\theta_A^*)
 $$
 
+
+
+
 $$
 \mu =\theta_A^* \\
 \sigma = - \frac{1}{f^"(\theta_A^*)}
 $$
 
+
+
+
 $$
-\theta = arg \min L_B(\theta)-f(\theta_A^*)-\frac{1}{2}(\theta-\theta_A^*)f^"(\theta_A^*)\\
+\theta = arg \min L_B(\theta)-f(\theta_A^*)-\frac{1}{2}(\theta-\theta_A^*)f^"(\theta_A^*)
+$$
+
+
+$$
+\theta = 
 =arg \min L_B(\theta)-f(\theta_A^*)-\frac{1}{2}(\theta-\theta_A^*) E \left[ \frac{\partial^2 \ell \left( \theta ; x \right)}{\partial
-  \theta^2} \right]\\
- =  arg \min L_B(\theta)-f(\theta_A^*)+\frac{1}{2}(\theta-\theta_A^*)  V \left[ \frac{\partial \ell \left( \theta ; x \right)}{\partial \theta}
+  \theta^2} \right]
+$$
+
+
+
+$$
+\theta  =  arg \min L_B(\theta)-f(\theta_A^*)+\frac{1}{2}(\theta-\theta_A^*)  V \left[ \frac{\partial \ell \left( \theta ; x \right)}{\partial \theta}
   \right]
 $$
 
