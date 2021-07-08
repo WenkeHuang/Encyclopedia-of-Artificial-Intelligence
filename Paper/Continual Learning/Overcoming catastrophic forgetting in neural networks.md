@@ -52,7 +52,7 @@ Note that the left hand side is still describing the posterior probability of th
 
 $p(\theta|A)$ : This posterior probability must contain information about **which parameters were important to task A and is therefore the key to implementing EWC.**
 $$
-\mathcal{L}(\theta) = \mathcal{L}_B(\theta)+\sum_i \frac{\lambda}{2}F_i(\theta_i-\theta^*_{A,i})^2 
+\mathcal{L}(\theta) = \mathcal{L}_B(\theta)+\sum_i \frac{\lambda}{2}F_i(\theta_i-\theta^*_{A,i})^2
 $$
 $\mathcal{L}_B(\theta)$ is the loss for task B only, $\lambda$ sets how important the old task is compared to the new one and $i$ labels each parameter
 

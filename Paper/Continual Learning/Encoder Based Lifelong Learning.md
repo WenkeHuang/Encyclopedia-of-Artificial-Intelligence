@@ -28,7 +28,7 @@ iCaRL proposes to store a selection of the previous tasks data to overcome this 
 
 ☑️ The use of the Fisher matrix prevents the weights that are important for the first task to change much
 
-❌ First, the method keeps the weights in a neighborhood of one possible mini- mizer of the empirical risk of the first task. However, there could be another solution that can give a better compromise between the two tasks.
+❌ First, the method keeps the weights in a neighborhood of one possible minimizer of the empirical risk of the first task. However, there could be another solution that can give a better compromise between the two tasks.
 
 ❌ Second, it needs to store a large number of parameters that grows with the total number of weights and the number of tasks.
 
