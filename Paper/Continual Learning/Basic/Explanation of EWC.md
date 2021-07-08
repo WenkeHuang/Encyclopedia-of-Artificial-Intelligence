@@ -133,10 +133,11 @@ $$
 \theta = arg \min L_B(\theta)-f(\theta_A^*)-\frac{1}{2}(\theta-\theta_A^*)f^"(\theta_A^*)\\
 =arg \min L_B(\theta)-f(\theta_A^*)-\frac{1}{2}(\theta-\theta_A^*) E \left[ \frac{\partial^2 \ell \left( \theta ; x \right)}{\partial
   \theta^2} \right]\\
-  arg \min L_B(\theta)-f(\theta_A^*)+\frac{1}{2}(\theta-\theta_A^*)  V \left[ \frac{\partial \ell \left( \theta ; x \right)}{\partial \theta}
+ =  arg \min L_B(\theta)-f(\theta_A^*)+\frac{1}{2}(\theta-\theta_A^*)  V \left[ \frac{\partial \ell \left( \theta ; x \right)}{\partial \theta}
   \right]
 $$
 
 $$
 \mathcal{L}(\theta) = \mathcal{L}_B(\theta)+\sum_i \frac{\lambda}{2}F_i(\theta_i-\theta^*_{A,i})^2
 $$
+
