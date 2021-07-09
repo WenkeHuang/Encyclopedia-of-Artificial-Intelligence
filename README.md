@@ -7,10 +7,6 @@ Better reading experience:
 
 [Typora]( https://typora.io/)
 
-## Paper
-
-[Attention](./Paper/Attention/)
-
 ## Machine Learning
 
 [1.统计学习方法概论](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Machine%20Learning/1.%20%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E6%A6%82%E8%AE%BA.md)  
