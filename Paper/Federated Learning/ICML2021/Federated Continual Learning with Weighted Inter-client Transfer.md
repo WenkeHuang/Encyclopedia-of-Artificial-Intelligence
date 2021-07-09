@@ -82,7 +82,7 @@ A sparsity-inducing regularization term for the task adaptive parameter and the 
 
 $\sum||||^2_2$
 
-The final regularization term is used for retroac- tive update of the past task-adaptive parameters, which helps the task-adaptive parameters to maintain the original solu- tions for the target tasks, by **reflecting the change of the base parameter**.
+The final regularization term is used for retroactive update of the past task-adaptive parameters, which helps the task-adaptive parameters to maintain the original solu- tions for the target tasks, by **reflecting the change of the base parameter**.
 
 ## Conclusion
 

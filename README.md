@@ -11,6 +11,24 @@ Better reading experience:
 
 [Attention](./Paper/Attention/)
 
+[Continual Learning](./Paper/Continual Learning/)
+
+[Federated Learning](./Paper/Federated Learning/)
+
+[Interesting](./Paper/Interesting/)
+
+[Knowledge Distillation](./Paper/Knowledge Distillation)
+
+[Long Tail Problem](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/tree/master/Paper/Long Tail Problem)
+
+[Object Detection](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/tree/master/Paper/Object Detection)
+
+[Self-Supervised Learning](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/tree/master/Paper/Self-Supervised Learning)
+
+[Transfer Learning](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/tree/master/Paper/Transfer Learning)
+
+[Zero-Shot Learning](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/tree/master/Paper/Zero-Shot Learning)
+
 ## Machine Learning
 
 [1.统计学习方法概论](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Machine%20Learning/1.%20%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E6%A6%82%E8%AE%BA.md)  
