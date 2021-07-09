@@ -11,23 +11,23 @@ Better reading experience:
 
 [Attention](./Paper/Attention/)
 
-[Continual Learning](./Paper/Continual Learning/)
+[Continual Learning](./Paper/Continual%20Learning/)
 
-[Federated Learning](./Paper/Federated Learning/)
+[Federated Learning](./Paper/Federated%20Learning/)
 
 [Interesting](./Paper/Interesting/)
 
-[Knowledge Distillation](./Paper/Knowledge Distillation)
+[Knowledge Distillation](./Paper/Knowledge%20Distillation)
 
-[Long Tail Problem](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/tree/master/Paper/Long Tail Problem)
+[Long Tail Problem](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/tree/master/Paper/Long%20Tail%20Problem)
 
-[Object Detection](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/tree/master/Paper/Object Detection)
+[Object Detection](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/tree/master/Paper/Object%20Detection)
 
-[Self-Supervised Learning](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/tree/master/Paper/Self-Supervised Learning)
+[Self-Supervised Learning](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/tree/master/Paper/Self-Supervised%20Learning)
 
-[Transfer Learning](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/tree/master/Paper/Transfer Learning)
+[Transfer Learning](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/tree/master/Paper/Transfer%20Learning)
 
-[Zero-Shot Learning](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/tree/master/Paper/Zero-Shot Learning)
+[Zero-Shot Learning](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/tree/master/Paper/Zero-Shot%20Learning)
 
 ## Machine Learning
 
