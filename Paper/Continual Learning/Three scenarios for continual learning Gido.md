@@ -1,4 +1,4 @@
-# Three scenarios for continual learning Gido
+# Three scenarios for continual learning
 
 Standard artificial neural networks suffer from the well-known issue of **catastrophic forgetting**, making continual or lifelong learning difficult for machine learning.
 
