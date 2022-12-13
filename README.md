@@ -3,32 +3,6 @@ I have the Artificial Intelligence knowledge you want.
 
 Better reading experience:
 
-[Mathjax plugin for github ](https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima) 
-
-[Typora]( https://typora.io/)
-
-## Paper
-
-[Attention](./Paper/Attention/)
-
-[Continual Learning](./Paper/Continual%20Learning/)
-
-[Federated Learning](./Paper/Federated%20Learning/)
-
-[Interesting](./Paper/Interesting/)
-
-[Knowledge Distillation](./Paper/Knowledge%20Distillation)
-
-[Long Tail Problem](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/tree/master/Paper/Long%20Tail%20Problem)
-
-[Object Detection](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/tree/master/Paper/Object%20Detection)
-
-[Self-Supervised Learning](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/tree/master/Paper/Self-Supervised%20Learning)
-
-[Transfer Learning](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/tree/master/Paper/Transfer%20Learning)
-
-[Zero-Shot Learning](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/tree/master/Paper/Zero-Shot%20Learning)
-
 ## Machine Learning
 
 [1.统计学习方法概论](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Machine%20Learning/1.%20%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E6%A6%82%E8%AE%BA.md)  
@@ -53,18 +27,7 @@ Better reading experience:
 [20. 潜在狄利克雷分配](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Machine%20Learning/20.%20%E6%BD%9C%E5%9C%A8%E7%8B%84%E5%88%A9%E5%85%8B%E9%9B%B7%E5%88%86%E9%85%8D.md)<br>
 [21. PageRank算法](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Machine%20Learning/21.%20PageRank%E7%AE%97%E6%B3%95.md)
 
-## Deep Learning
-[Neural Networks and Deep Learning](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Deep%20Learning/Basic%20Knowledge/Neural%20Networks%20and%20Deep%20Learning.md)<br>
-[Improving Deep Neural Networks](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Deep%20Learning/Basic%20Knowledge/Improving%20Deep%20Neural%20Networks.md)<br>
-[Convolutional Neural Networks](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Deep%20Learning/Basic%20Knowledge/Convolutional%20Neural%20Networks.md)<br>
-[Natural Language Processing: Building sequence models](https://github.com/WenkeHuang/Encyclopedia-of-Artificial-Intelligence/blob/master/Deep%20Learning/Basic%20Knowledge/Natural%20Language%20Processing%20Building%20sequence%20models.md)
 
-## Reference books and courses
-- 统计学习方法 第二版 李航
-- cs229: Machine Learning Stanford University
-- CS231n: Convolutional Neural Networks for Visual Recognition Stanford University
-- CS520 Knowledge Graphs Stanford University
-- Deep Learning and Machine Learning Hung-yi Lee
 ## Personal Information
 Major：Software engineering & Finance    
 Research Areas：Full Stack development & Computer Vision & Econometrics    
