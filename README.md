@@ -5,8 +5,7 @@ I have the Artificial Intelligence knowledge you want.
 Research Field: Federated Learning, Self-Supervised Learning, Graph Learning and Knowledge Distillation
 
 
-## Personal Information
-My name is Wenke Huang (黄文柯). \
-I am currently a PhD student in School of Computer Science at Wuhan University, advised by Prof. Mang Ye and Prof. Bo Du.
+[Link](https://drive.google.com/file/d/1itsc9vfzTWWktQppFHx79PMpYGCYmQIe/view)
 
-[Personal Page](https://wenkehuang.github.io/)
+## Personal Information
+My name is Wenke Huang (黄文柯): [Personal Page](https://wenkehuang.github.io/)
